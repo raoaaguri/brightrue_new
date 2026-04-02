@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Products — Brighture Physical AI Platform &amp; Edge AI Systems</title>
+  <meta name="description"
+    content="Brighture AI Products: Physical AI Platform with AI Forklift Safety Systems and Edge AI Systems — modular AI compute for robotics, computer vision, and autonomous systems.">
+  <meta name="keywords"
+    content="AI Forklift Safety, Physical AI Platform, Edge AI Systems, Computer Vision, Autonomous Systems, Industrial AI, Brighture AI Products">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Products — Brighture Physical AI Platform &amp; Edge AI Systems">
+  <meta property="og:description"
+    content="Engineering intelligent machines for safe real-world operations. Forklift AI safety systems and modular edge AI compute platforms.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1a56ff">
+  <link rel="canonical" href="https://www.brightureglobal.com/ai-products.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Roboto:wght@400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* ── PLATFORM INTRO ── */
+    .platform-block {
+      padding: 80px 5%;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .platform-block:first-of-type {
+      background: white;
+    }
+
+    .platform-block:last-of-type {
+      background: var(--bg-alt);
+      border-bottom: none;
+    }
+
+    .platform-block-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .platform-block-header .section-label {
+      justify-content: center;
+    }
+
+    .platform-block-header h2 {
+      margin-bottom: 0.75rem;
+    }
+
+    .platform-block-header p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .platform-caps-wrap {
+      background: linear-gradient(135deg, var(--blue-xlight), var(--purple-xlight));
+      border: 1px solid var(--blue-light);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .platform-caps-wrap h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    .platform-caps-wrap>p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .platform-caps-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+    }
+
+    .cap-item {
+      background: white;
+      border: 1px solid var(--blue-light);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+
+    .cap-item h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 0.4rem;
+    }
+
+    .cap-item p {
+      font-size: 0.73rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* ── FORKLIFT PRODUCTS ── */
+    .forklift-intro {
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    .forklift-intro h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .forklift-intro p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      max-width: 600px;
+      line-height: 1.75;
+      margin: 0 auto;
+    }
+
+    .products-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .product-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      opacity: 0;
+      transition: opacity 0.3s;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-mid);
+      background: white;
+    }
+
+    .product-card:hover::before {
+      opacity: 1;
+    }
+
+    .product-num {
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.75rem;
+    }
+
+    .product-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .product-tagline {
+      font-size: 0.76rem;
+      color: var(--purple);
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .product-caps {
+      margin-bottom: 1.25rem;
+    }
+
+    .product-caps li {
+      font-size: 0.77rem;
+      color: var(--body);
+      padding: 0.2rem 0 0.2rem 1rem;
+      position: relative;
+    }
+
+    .product-caps li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .product-specs {
+      background: white;
+      border-radius: var(--radius-sm);
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+    }
+
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.71rem;
+      padding: 0.18rem 0;
+    }
+
+    .spec-key {
+      color: var(--light);
+    }
+
+    .spec-val {
+      color: var(--body);
+      font-weight: 500;
+      text-align: right;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin: 2.5rem 0;
+    }
+
+    .benefit-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .benefit-item:hover {
+      border-color: var(--blue-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .benefit-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .benefit-content h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+
+    .benefit-content p {
+      font-size: 0.76rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .industries-row {
+      background: var(--orange-xlight);
+      border: 1px solid rgba(234, 108, 0, 0.2);
+      border-radius: 12px;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .industries-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    .industry-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .ind-tag {
+      font-size: 0.75rem;
+      background: white;
+      border: 1px solid rgba(234, 108, 0, 0.2);
+      border-radius: 6px;
+      padding: 0.3rem 0.8rem;
+      color: var(--body);
+    }
+
+    /* ── EDGE AI SYSTEMS ── */
+    .edge-intro {
+      background: linear-gradient(135deg, var(--ink) 0%, #1e2d5a 100%);
+      border-radius: var(--radius);
+      padding: 3rem;
+      margin-bottom: 3rem;
+      color: white;
+    }
+
+    .edge-intro h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.75rem;
+    }
+
+    .edge-intro p {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.75;
+      max-width: 680px;
+    }
+
+    .edge-tiers {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .tier-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.25rem;
+      transition: all 0.3s;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tier-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      border-radius: 3px 3px 0 0;
+      transition: opacity 0.3s;
+      opacity: 0.5;
+    }
+
+    .tier-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-mid);
+    }
+
+    .tier-card:hover::before {
+      opacity: 1;
+    }
+
+    .tier-lite::before {
+      background: linear-gradient(90deg, var(--muted), var(--light));
+    }
+
+    .tier-core::before {
+      background: linear-gradient(90deg, var(--blue-mid), var(--blue));
+    }
+
+    .tier-prime::before {
+      background: linear-gradient(90deg, var(--purple), var(--purple-mid));
+    }
+
+    .tier-pro::before {
+      background: linear-gradient(90deg, var(--orange), var(--orange-mid));
+    }
+
+    .tier-ultra::before {
+      background: linear-gradient(90deg, var(--blue), var(--purple), var(--orange));
+    }
+
+    .tier-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+
+    .tier-positioning {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .tier-stars {
+      font-size: 0.65rem;
+      color: var(--amber);
+      margin-bottom: 1rem;
+    }
+
+    .tier-best {
+      font-size: 0.75rem;
+      color: var(--body);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .tier-badge {
+      display: inline-block;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .edge-table-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .edge-table-title h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .edge-table-title p {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .edge-table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 2.5rem;
+    }
+
+    .edge-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      min-width: 750px;
+    }
+
+    .edge-table thead tr {
+      background: var(--ink);
+    }
+
+    .edge-table thead th {
+      padding: 0.875rem 1rem;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.5);
+      border: none;
+      text-align: center;
+    }
+
+    .edge-table thead th:first-child {
+      text-align: left;
+      color: rgba(255, 255, 255, 0.6);
+      min-width: 160px;
+    }
+
+    .th-ultra {
+      color: #f59e0b !important;
+    }
+
+    .th-pro {
+      color: #f97316 !important;
+    }
+
+    .th-prime {
+      color: var(--purple-mid) !important;
+    }
+
+    .th-core {
+      color: #60a5fa !important;
+    }
+
+    .th-lite {
+      color: rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .edge-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    .edge-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .edge-table tbody tr:hover {
+      background: #f8faff;
+    }
+
+    .edge-table tbody td {
+      padding: 0.75rem 1rem;
+      font-size: 0.79rem;
+      color: var(--body);
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .edge-table tbody td:first-child {
+      text-align: left;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 0.78rem;
+    }
+
+    .section-row-edge td {
+      background: var(--bg-alt2) !important;
+      font-family: 'Syne', sans-serif !important;
+      font-size: 0.68rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase !important;
+      color: var(--light) !important;
+      padding: 0.6rem 1rem !important;
+      text-align: left !important;
+    }
+
+    .perf-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--amber);
+      margin: 0 1px;
+    }
+
+    .tech-caps-strip {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+
+    .tech-caps-strip h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    .tech-caps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+
+    .tech-cap-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.79rem;
+      color: var(--body);
+    }
+
+    .tech-cap-item::before {
+      content: '→';
+      color: var(--blue);
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .how-to-choose {
+      background: linear-gradient(135deg, var(--blue-xlight), var(--purple-xlight));
+      border: 1px solid var(--blue-light);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .how-to-choose h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .choose-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .choose-item {
+      background: white;
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+
+    .choose-tier {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 0.4rem;
+    }
+
+    .choose-desc {
+      font-size: 0.76rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 1100px) {
+      .platform-caps-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .edge-tiers {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 960px) {
+      .products-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tech-caps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .platform-caps-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .products-grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .edge-tiers {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .tech-caps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .choose-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .industries-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="#main-content" class="sr-only"
+    style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- NAV -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">brighture</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About Us</a></li>
+      <li><a href="ai-labs.html">AI Labs</a></li>
+      <li><a href="ai-trainings.html">AI Trainings</a></li>
+      <li><a href="ai-products.html" class="active" aria-current="page">AI Products</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Toggle mobile menu"
+      aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html">About Us</a>
+    <a href="ai-labs.html">AI Labs</a>
+    <a href="ai-trainings.html">AI Trainings</a>
+    <a href="ai-products.html" class="active">AI Products</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <div class="page-hero hero-split" aria-label="AI Products hero"
+      style="display: flex; align-items: center; justify-content: space-between; gap: 3rem; padding: 80px 5% 60px; background: linear-gradient(135deg, #fafbff 0%, #f0f4ff 40%, #f5f0ff 70%, #fff8f4 100%);">
+      <div class="page-hero-content" style="flex:1; min-width:320px;">
+        <div class="page-hero-badge">AI Products</div>
+        <h1>Smarter Intelligence.<br><span class="gradient-text">Anywhere. Anytime.</span></h1>
+        <p>A new era of computing is emerging — where intelligence moves beyond the cloud and into the real world.
+          Brighture delivers high-performance AI products that enable organizations, institutions, and innovators to
+          build, deploy, and scale intelligent applications seamlessly.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;">
+          <a href="contact.html" class="btn-primary">Request a Demo →</a>
+          <a href="#edge-ai" class="btn-secondary">Edge AI Systems</a>
+        </div>
+      </div>
+      <div class="page-hero-image"
+        style="flex:1; min-width:320px; display:flex; align-items:center; justify-content:center;">
+        <img src="images/Edge AI Systems.webp" alt="Edge AI Systems"
+          style="max-width: 440px; width:100%; height:auto; border-radius: 18px; box-shadow: 0 20px 60px rgba(26,86,255,0.13);">
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-strip">
+      <div class="stat-item reveal">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Product Lines</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Safety Products</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Edge AI Tiers</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-num">RT</div>
+        <div class="stat-label">Real-Time Processing</div>
+      </div>
+    </div>
+
+    <!-- PHYSICAL AI PLATFORM -->
+    <div class="platform-block" id="physical-ai">
+      <div style="display: flex; align-items: flex-start; gap: 2.5rem;">
+        <div class="platform-block-header reveal" style="flex:1; min-width:320px;">
+          <div class="section-label">AI Product Line 1</div>
+          <h2>Physical AI Platform</h2>
+          <p><em>Engineering Intelligent Machines for Safe Real-World Operations.</em> The Physical AI Platform enables
+            machines to perceive, understand, and act within dynamic environments — combining computer vision, edge AI,
+            robotics, and intelligent decision systems to transform conventional industrial equipment into intelligent
+            machines.</p>
+        </div>
+        <div style="flex:1; min-width:260px; display:flex; align-items:center; justify-content:center;">
+          <img src="images/AI Forklift Safety System2.webp" alt="AI Forklift Safety System"
+            style="max-width: 340px; width:100%; height:auto; border-radius: 16px; box-shadow: 0 10px 32px rgba(26,86,255,0.10);">
+        </div>
+      </div>
+
+      <div class="platform-caps-wrap reveal">
+        <h3>Platform Capabilities</h3>
+        <p>By combining AI, robotics, and edge computing, the platform transforms conventional industrial equipment into
+          intelligent machines capable of operating safely and efficiently in real-world environments.</p>
+        <div class="platform-caps-grid">
+          <div class="cap-item">
+            <h4>AI Vision Perception</h4>
+            <p>Computer vision models analyze the environment in real time to detect people, objects, obstacles, and
+              operational hazards.</p>
+          </div>
+          <div class="cap-item">
+            <h4>Spatial Awareness &amp; Mapping</h4>
+            <p>Advanced perception algorithms enable machines to understand spatial layouts and navigate complex
+              industrial environments.</p>
+          </div>
+          <div class="cap-item">
+            <h4>Autonomous Decision Systems</h4>
+            <p>AI models analyze incoming visual data and make real-time operational decisions to avoid hazards and
+              optimize movement.</p>
+          </div>
+          <div class="cap-item">
+            <h4>Edge AI Processing</h4>
+            <p>All processing occurs on embedded AI hardware — real-time performance without reliance on cloud
+              connectivity.</p>
+          </div>
+          <div class="cap-item">
+            <h4>Fleet Intelligence</h4>
+            <p>Multiple machines connected to centralized systems to monitor operations, optimize workflows, and improve
+              safety across entire fleets.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORKLIFT -->
+      <div class="forklift-intro reveal">
+        <div class="section-label" style="justify-content:center;">AI Forklift Safety System</div>
+        <h3>Product Portfolio</h3>
+        <p>Transform conventional forklifts into AI-powered autonomous systems that can see, understand, and act in real
+          time. Powered by advanced vision AI and edge intelligence — preventing workplace accidents and improving
+          operator awareness across industrial environments.</p>
+      </div>
+
+      <div class="products-grid-3">
+        <div class="product-card reveal">
+          <div class="product-num">Product 01</div>
+          <img src="images/AI Forklift Safety System1.webp" alt="270° AI Surround Safety System"
+            style="width:100%;max-width:180px;float:right;margin-left:1.2rem;margin-bottom:1rem;border-radius:10px;box-shadow:0 4px 16px rgba(26,86,255,0.08);">
+          <h3>270° AI Surround Safety System</h3>
+          <div class="product-tagline">AI-powered surround vision and pedestrian detection for forklifts</div>
+          <ul class="product-caps">
+            <li>AI-based pedestrian detection</li>
+            <li>Enhanced blind-spot visibility</li>
+            <li>Visual and audio proximity alerts</li>
+            <li>Operator-assisted collision avoidance</li>
+          </ul>
+          <div class="product-specs">
+            <div class="spec-row"><span class="spec-key">Camera Coverage</span><span class="spec-val">3-camera
+                configuration (rear + sides)</span></div>
+            <div class="spec-row"><span class="spec-key">Field of View</span><span class="spec-val">270° operational
+                coverage</span></div>
+            <div class="spec-row"><span class="spec-key">Display Mode</span><span class="spec-val">Multi-angle +
+                bird's-eye view</span></div>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-num">Product 02</div>
+          <img src="images/AI Forklift Safety System2.webp" alt="270° AI Surround Safety System with Auto-Braking"
+            style="width:100%;max-width:180px;float:right;margin-left:1.2rem;margin-bottom:1rem;border-radius:10px;box-shadow:0 4px 16px rgba(26,86,255,0.08);">
+          <h3>270° AI Surround Safety System with Auto-Braking</h3>
+          <div class="product-tagline">Advanced AI safety system with automated collision prevention</div>
+          <ul class="product-caps">
+            <li>Real-time pedestrian detection</li>
+            <li>Blind-spot monitoring</li>
+            <li>Intelligent alert system</li>
+            <li>Automatic braking during reverse or manoeuvring</li>
+          </ul>
+          <div class="product-specs">
+            <div class="spec-row"><span class="spec-key">Camera Coverage</span><span class="spec-val">3-camera
+                configuration</span></div>
+            <div class="spec-row"><span class="spec-key">Field of View</span><span class="spec-val">270° surround
+                coverage</span></div>
+            <div class="spec-row"><span class="spec-key">View Modes</span><span class="spec-val">Multi-angle +
+                bird's-eye</span></div>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-num">Product 03</div>
+          <img src="images/AI Forklift Safety System3.webp" alt="Rear Safety System with Automatic Braking"
+            style="width:100%;max-width:180px;float:right;margin-left:1.2rem;margin-bottom:1rem;border-radius:10px;box-shadow:0 4px 16px rgba(26,86,255,0.08);">
+          <h3>Rear Safety System with Automatic Braking</h3>
+          <div class="product-tagline">AI-assisted reverse safety for forklifts and industrial vehicles</div>
+          <ul class="product-caps">
+            <li>Rear pedestrian detection</li>
+            <li>Real-time reverse monitoring</li>
+            <li>Automatic braking on obstacle detection</li>
+            <li>Driver alerts and safety intervention</li>
+          </ul>
+          <div class="product-specs">
+            <div class="spec-row"><span class="spec-key">Camera Setup</span><span class="spec-val">Single rear-facing
+                camera</span></div>
+            <div class="spec-row"><span class="spec-key">Coverage</span><span class="spec-val">Wide rear monitoring
+                zone</span></div>
+            <div class="spec-row"><span class="spec-key">View Mode</span><span class="spec-val">Rear visibility
+                display</span></div>
+          </div>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-num">Product 04</div>
+          <img src="images/AI Forklift Safety System1.webp" alt="Rear Pedestrian Monitoring System"
+            style="width:100%;max-width:180px;float:right;margin-left:1.2rem;margin-bottom:1rem;border-radius:10px;box-shadow:0 4px 16px rgba(26,86,255,0.08);">
+          <h3>Rear Pedestrian Monitoring System</h3>
+          <div class="product-tagline">Lightweight AI monitoring system for improved rear visibility</div>
+          <ul class="product-caps">
+            <li>Rear pedestrian detection</li>
+            <li>Proximity-based visual and audio alerts</li>
+            <li>Improved driver awareness during reversing</li>
+          </ul>
+          <div class="product-specs">
+            <div class="spec-row"><span class="spec-key">Camera Setup</span><span class="spec-val">Single rear
+                camera</span></div>
+            <div class="spec-row"><span class="spec-key">Coverage</span><span class="spec-val">Rear-zone
+                monitoring</span></div>
+            <div class="spec-row"><span class="spec-key">View Mode</span><span class="spec-val">Rear-view display</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-num">Product 05</div>
+          <img src="images/Wireless Safety Camera.webp" alt="Wireless Safety Camera"
+            style="width:100%;max-width:180px;float:right;margin-left:1.2rem;margin-bottom:1rem;border-radius:10px;box-shadow:0 4px 16px rgba(26,86,255,0.08);">
+          <h3>Wireless Safety Camera</h3>
+          <div class="product-tagline">Flexible wireless monitoring for industrial vehicles</div>
+          <ul class="product-caps">
+            <li>Real-time wireless video transmission</li>
+            <li>Quick installation with no cable routing</li>
+            <li>Low-latency live monitoring</li>
+            <li>Easy relocation between vehicles</li>
+          </ul>
+          <div class="product-specs">
+            <div class="spec-row"><span class="spec-key">Connection</span><span class="spec-val">Wireless</span></div>
+            <div class="spec-row"><span class="spec-key">Installation</span><span class="spec-val">No cable
+                routing</span></div>
+            <div class="spec-row"><span class="spec-key">Latency</span><span class="spec-val">Low-latency live
+                feed</span></div>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-num">Product 06</div>
+          <img src="images/Wireless Camera RT.webp" alt="Wireless Camera RT"
+            style="width:100%;max-width:180px;float:right;margin-left:1.2rem;margin-bottom:1rem;border-radius:10px;box-shadow:0 4px 16px rgba(26,86,255,0.08);">
+          <h3>Wireless Camera RT</h3>
+          <div class="product-tagline">Industrial-grade wireless camera for real-time rear visibility</div>
+          <ul class="product-caps">
+            <li>Stable wireless performance in demanding environments</li>
+            <li>Real-time rear monitoring</li>
+            <li>Tool-free installation — no dismantling required</li>
+            <li>Portable and easy to transfer between forklifts</li>
+          </ul>
+          <div class="product-specs">
+            <div class="spec-row"><span class="spec-key">Grade</span><span class="spec-val">Industrial-grade</span>
+            </div>
+            <div class="spec-row"><span class="spec-key">Installation</span><span class="spec-val">Tool-free</span>
+            </div>
+            <div class="spec-row"><span class="spec-key">Portability</span><span class="spec-val">Portable /
+                transferable</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BENEFITS -->
+      <div class="benefits-grid">
+        <div class="benefit-item reveal">
+          <div class="benefit-icon">🛡️</div>
+          <div class="benefit-content">
+            <h4>Improve Workplace Safety</h4>
+            <p>AI-powered pedestrian detection helps prevent collisions and workplace accidents before they happen.</p>
+          </div>
+        </div>
+        <div class="benefit-item reveal reveal-delay-1">
+          <div class="benefit-icon">👁️</div>
+          <div class="benefit-content">
+            <h4>Enhance Operator Awareness</h4>
+            <p>Advanced vision systems reduce blind spots and dramatically improve situational awareness for operators.
+            </p>
+          </div>
+        </div>
+        <div class="benefit-item reveal reveal-delay-2">
+          <div class="benefit-icon">⚡</div>
+          <div class="benefit-content">
+            <h4>Reduce Operational Risk</h4>
+            <p>Automated alerts and safety interventions help minimize human error and reduce costly incidents.</p>
+          </div>
+        </div>
+        <div class="benefit-item reveal reveal-delay-3">
+          <div class="benefit-icon">🔧</div>
+          <div class="benefit-content">
+            <h4>Retrofit Compatible</h4>
+            <p>Systems can be installed on existing forklifts and industrial vehicles without any dismantling required.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="industries-row reveal">
+        <div class="industries-label">Industries Served</div>
+        <div class="industry-tags">
+          <span class="ind-tag">Warehousing &amp; Logistics</span>
+          <span class="ind-tag">Manufacturing Facilities</span>
+          <span class="ind-tag">Ports &amp; Container Terminals</span>
+          <span class="ind-tag">Distribution Centers</span>
+          <span class="ind-tag">Industrial Automation Environments</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EDGE AI SYSTEMS -->
+    <div class="platform-block" id="edge-ai">
+      <div style="display: flex; align-items: flex-start; gap: 2.5rem;">
+        <div class="platform-block-header reveal" style="flex:1; min-width:320px;">
+          <div class="section-label">AI Product Line 2</div>
+          <h2>Edge AI Systems</h2>
+          <p>Modular AI compute for real-world intelligence. High-performance Edge AI Systems designed for robotics,
+            computer vision, autonomous systems, and real-time intelligent applications — built for learning,
+            prototyping, and deployment, from classrooms to industrial environments.</p>
+        </div>
+        <div style="flex:1; min-width:260px; display:flex; align-items:center; justify-content:center;">
+          <img src="images/Edge AI Systems.webp" alt="Edge AI Systems"
+            style="max-width: 340px; width:100%; height:auto; border-radius: 16px; box-shadow: 0 10px 32px rgba(26,86,255,0.10);">
+        </div>
+      </div>
+
+      <div class="edge-intro reveal">
+        <h3>🧩 Product Line Overview</h3>
+        <p>Five carefully tiered Edge AI Systems — from entry-level learning platforms to flagship autonomous AI compute
+          — ensuring the right level of performance for every application, environment, and budget.</p>
+      </div>
+
+      <div class="edge-tiers">
+        <div class="tier-card tier-lite reveal">
+          <img src="images/Lite.webp" alt="Lite Edge AI System"
+            style="width:100%;max-width:120px;float:right;margin-left:1rem;margin-bottom:0.5rem;border-radius:8px;box-shadow:0 2px 8px rgba(26,86,255,0.08);">
+          <div class="tier-name">🔷 Lite</div>
+          <div class="tier-positioning">Entry-Level System</div>
+          <div class="tier-stars">⭐⭐</div>
+          <div class="tier-best">Compact and accessible AI system. Supports basic robotics, IoT, and programming. Ideal
+            for beginners and early-stage learners.</div>
+          <div class="tier-badge">For Getting Started with AI</div>
+        </div>
+        <div class="tier-card tier-core reveal reveal-delay-1">
+          <img src="images/Core.webp" alt="Core Edge AI System"
+            style="width:100%;max-width:120px;float:right;margin-left:1rem;margin-bottom:0.5rem;border-radius:8px;box-shadow:0 2px 8px rgba(26,86,255,0.08);">
+          <div class="tier-name">🔷 Core</div>
+          <div class="tier-positioning">Foundation System</div>
+          <div class="tier-stars">⭐⭐⭐</div>
+          <div class="tier-best">Entry platform for embedded AI and intelligent systems. Sensor integration and basic
+            automation workflows. Designed for schools and foundational AI labs.</div>
+          <div class="tier-badge">For Foundational AI Learning</div>
+        </div>
+        <div class="tier-card tier-prime reveal reveal-delay-2">
+          <img src="images/Prime.webp" alt="Prime Edge AI System"
+            style="width:100%;max-width:120px;float:right;margin-left:1rem;margin-bottom:0.5rem;border-radius:8px;box-shadow:0 2px 8px rgba(26,86,255,0.08);">
+          <div class="tier-name">🔷 Prime</div>
+          <div class="tier-positioning">Applied AI Platform</div>
+          <div class="tier-stars">⭐⭐⭐⭐</div>
+          <div class="tier-best">AI processing with applied robotics workflows. Supports IoT, automation, and
+            vision-based applications. Bridges learning and real-world implementation.</div>
+          <div class="tier-badge">For Applied AI &amp; Innovation</div>
+        </div>
+        <div class="tier-card tier-pro reveal reveal-delay-3">
+          <img src="images/Pro.webp" alt="Pro Edge AI System"
+            style="width:100%;max-width:120px;float:right;margin-left:1rem;margin-bottom:0.5rem;border-radius:8px;box-shadow:0 2px 8px rgba(26,86,255,0.08);">
+          <div class="tier-name">🔷 Pro</div>
+          <div class="tier-positioning">Advanced AI System</div>
+          <div class="tier-stars">⭐⭐⭐⭐</div>
+          <div class="tier-best">Advanced AI processing and computer vision capabilities. Robotics and automation system
+            integration. Built for universities and AI development labs.</div>
+          <div class="tier-badge">For High-Performance AI Dev</div>
+        </div>
+        <div class="tier-card tier-ultra reveal reveal-delay-4">
+          <img src="images/Ultra.webp" alt="Ultra Edge AI System"
+            style="width:100%;max-width:120px;float:right;margin-left:1rem;margin-bottom:0.5rem;border-radius:8px;box-shadow:0 2px 8px rgba(26,86,255,0.08);">
+          <div class="tier-name">🔷 Ultra</div>
+          <div class="tier-positioning">Flagship AI Compute</div>
+          <div class="tier-stars">⭐⭐⭐⭐⭐</div>
+          <div class="tier-best">High-performance AI compute for real-time decision systems. Multi-camera computer
+            vision and robotics integration for research and industrial deployments.</div>
+          <div class="tier-badge">For Advanced &amp; Autonomous AI</div>
+        </div>
+      </div>
+
+      <div class="edge-table-title reveal">
+        <h3>Full Specification Comparison</h3>
+        <p>Compare all Edge AI Systems across performance, connectivity, and use case fit.</p>
+      </div>
+      <div class="edge-table-wrap reveal">
+        <table class="edge-table" aria-label="Edge AI Systems full specification comparison">
+          <thead>
+            <tr>
+              <th scope="col">Specification</th>
+              <th scope="col" class="th-ultra">🔷 Ultra</th>
+              <th scope="col" class="th-pro">🔷 Pro</th>
+              <th scope="col" class="th-prime">🔷 Prime</th>
+              <th scope="col" class="th-core">🔷 Core</th>
+              <th scope="col" class="th-lite">🔷 Lite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="section-row-edge">
+              <td colspan="6">Positioning</td>
+            </tr>
+            <tr>
+              <td>Classification</td>
+              <td>Flagship AI Compute</td>
+              <td>Advanced AI System</td>
+              <td>Applied AI Platform</td>
+              <td>Foundation System</td>
+              <td>Entry-Level System</td>
+            </tr>
+            <tr>
+              <td>Best For</td>
+              <td>Research &amp; Industrial AI</td>
+              <td>Universities &amp; Labs</td>
+              <td>Innovation &amp; Prototyping</td>
+              <td>Schools &amp; Training</td>
+              <td>Beginners</td>
+            </tr>
+            <tr>
+              <td>AI Performance</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐</td>
+              <td>⭐⭐</td>
+            </tr>
+            <tr class="section-row-edge">
+              <td colspan="6">Hardware</td>
+            </tr>
+            <tr>
+              <td>GPU Power</td>
+              <td>High-end (16 GB AI GPU)</td>
+              <td>High (12 GB)</td>
+              <td>Medium (6 GB)</td>
+              <td>Entry AI GPU</td>
+              <td>Basic AI GPU</td>
+            </tr>
+            <tr>
+              <td>CPU</td>
+              <td>8-Core / 16 Thread</td>
+              <td>8-Core / 16 Thread</td>
+              <td>8-Core / 16 Thread</td>
+              <td>6-Core / 12 Thread</td>
+              <td>2-Core / 4 Thread</td>
+            </tr>
+            <tr>
+              <td>RAM</td>
+              <td>32 GB</td>
+              <td>32 GB</td>
+              <td>32 GB</td>
+              <td>16 GB</td>
+              <td>16 GB</td>
+            </tr>
+            <tr>
+              <td>Storage</td>
+              <td>1 TB</td>
+              <td>1 TB</td>
+              <td>500 GB</td>
+              <td>500 GB</td>
+              <td>256 GB</td>
+            </tr>
+            <tr class="section-row-edge">
+              <td colspan="6">AI Capabilities</td>
+            </tr>
+            <tr>
+              <td>Edge AI Processing</td>
+              <td>✓ Advanced</td>
+              <td>✓ Advanced</td>
+              <td>✓ Standard</td>
+              <td>✓ Basic</td>
+              <td>✓ Entry</td>
+            </tr>
+            <tr>
+              <td>Computer Vision</td>
+              <td>✓ Multi-camera</td>
+              <td>✓ Multi-stream</td>
+              <td>✓ Standard</td>
+              <td>✓ Basic</td>
+              <td>✓ Intro</td>
+            </tr>
+            <tr>
+              <td>Robotics Integration</td>
+              <td>✓ Industrial</td>
+              <td>✓ Advanced</td>
+              <td>✓ Standard</td>
+              <td>✓ Basic</td>
+              <td>✓ Intro</td>
+            </tr>
+            <tr>
+              <td>Autonomous Systems</td>
+              <td>✓ Full</td>
+              <td>✓ High</td>
+              <td>✓ Medium</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Simulation / Digital Twin</td>
+              <td>✓ Advanced</td>
+              <td>✓ Advanced</td>
+              <td>✓ Standard</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr class="section-row-edge">
+              <td colspan="6">Connectivity &amp; OS</td>
+            </tr>
+            <tr>
+              <td>IoT &amp; Sensors</td>
+              <td>✓ Full</td>
+              <td>✓ Full</td>
+              <td>✓ Standard</td>
+              <td>✓ Basic</td>
+              <td>✓ Basic</td>
+            </tr>
+            <tr>
+              <td>Connectivity</td>
+              <td>WiFi 6 + Dual LAN</td>
+              <td>WiFi 6 + Dual LAN</td>
+              <td>WiFi 6 + Dual LAN</td>
+              <td>WiFi 6 + Dual LAN</td>
+              <td>WiFi 6 + Dual LAN</td>
+            </tr>
+            <tr>
+              <td>OS Support</td>
+              <td>Linux / Windows</td>
+              <td>Linux / Windows</td>
+              <td>Linux / Windows</td>
+              <td>Linux / Windows</td>
+              <td>Linux / Windows</td>
+            </tr>
+            <tr>
+              <td>Power Range</td>
+              <td>50–95 W</td>
+              <td>50–95 W</td>
+              <td>50–95 W</td>
+              <td>10–75 W</td>
+              <td>10–75 W</td>
+            </tr>
+            <tr class="section-row-edge">
+              <td colspan="6">Ideal Use Case</td>
+            </tr>
+            <tr>
+              <td>Primary Application</td>
+              <td>Autonomous AI Systems</td>
+              <td>AI Labs &amp; Vision Systems</td>
+              <td>Product Development</td>
+              <td>Learning &amp; Labs</td>
+              <td>Intro AI Learning</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tech-caps-strip reveal">
+        <h4>Technical Capabilities — All Edge AI Systems</h4>
+        <div class="tech-caps-grid">
+          <div class="tech-cap-item">AI compute performance from entry-level to high-performance</div>
+          <div class="tech-cap-item">Multi-core processing with optimized memory configurations</div>
+          <div class="tech-cap-item">Edge AI inference for real-time decision making</div>
+          <div class="tech-cap-item">Support for Linux and Windows environments</div>
+          <div class="tech-cap-item">High-speed connectivity with WiFi 6 and Ethernet</div>
+          <div class="tech-cap-item">Scalable architecture designed to grow with your needs</div>
+        </div>
+      </div>
+
+      <div class="how-to-choose reveal">
+        <h4>How to Choose Your Edge AI System</h4>
+        <div class="choose-grid">
+          <div class="choose-item">
+            <div class="choose-tier">Lite / Core</div>
+            <div class="choose-desc">Start your AI journey — ideal for education and early exploration.</div>
+          </div>
+          <div class="choose-item">
+            <div class="choose-tier">Prime</div>
+            <div class="choose-desc">Build real-world systems — connect learning to practical deployment.</div>
+          </div>
+          <div class="choose-item">
+            <div class="choose-tier">Pro</div>
+            <div class="choose-desc">Develop advanced AI applications — for labs and university-level work.</div>
+          </div>
+          <div class="choose-item">
+            <div class="choose-tier">Ultra</div>
+            <div class="choose-desc">Deploy autonomous and industrial AI solutions at scale.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="page-cta" aria-label="Call to action">
+      <div class="page-cta-inner">
+        <div class="section-label" style="justify-content:center;color:rgba(255,255,255,0.6);">Get Started</div>
+        <h2>Ready to Build the Future of Innovation?</h2>
+        <p>Whether you are planning to establish an AI Innovation Lab, explore robotics and intelligent systems, or
+          deploy AI-powered industrial solutions  the Brighture team is ready to support your journey.</p>
+        <div class="page-cta-actions">
+          <a href="contact.html" class="cta-btn-white">Contact Us </a>
+          <a href="ai-labs.html" class="cta-btn-ghost">Explore AI Labs</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">brighture</a>
+        <p>Engineering Human Intelligence for the AI Future. Building AI Innovation Labs, robotics ecosystems, and
+          future skills infrastructure globally.</p>
+        <div style="margin-top:1.25rem;font-size:0.75rem;color:rgba(255,255,255,0.3);">innovate@brightureglobal.com
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="ai-labs.html">AI Labs</a></li>
+          <li><a href="ai-trainings.html">AI Trainings</a></li>
+          <li><a href="ai-products.html">AI Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#physical-ai">Physical AI Platform</a></li>
+          <li><a href="#physical-ai">Forklift Safety Systems</a></li>
+          <li><a href="#edge-ai">Edge AI Systems</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="mailto:innovate@brightureglobal.com">Send an Email</a></li>
+          <li><a href="https://www.brightureglobal.com" target="_blank" rel="noopener">Website</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Brighture Global. All rights reserved.</p>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shared.js" defer></script>
+</body>
+
+</html>

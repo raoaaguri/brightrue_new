@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Trainings — Brighture Learn. Build. Innovate.</title>
+  <meta name="description"
+    content="Brighture AI Trainings: A progressive, age-based learning journey covering Robotics, IoT, Drone Technology, VR/AR, and Android App Development — from Explorer to AI Specialist.">
+  <meta name="keywords"
+    content="AI Training, Robotics Training, IoT Training, Drone Technology, VR AR Development, Android App, Brighture, STEM Education, AI Learning Programs">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Trainings — Brighture Learn. Build. Innovate.">
+  <meta property="og:description"
+    content="Progressive AI training programs from Explorer to AI Specialist. Hands-on, project-based learning across Robotics, IoT, Drones, VR/AR, and Android Development.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1a56ff">
+  <link rel="canonical" href="https://www.brightureglobal.com/ai-trainings.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Roboto:wght@400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* ── TRAINING LEVEL CARDS ── */
+    .training-section {
+      padding: 80px 5%;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .training-section:nth-child(even) {
+      background: var(--bg-alt);
+    }
+
+    .training-section:nth-child(odd) {
+      background: white;
+    }
+
+    .training-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .training-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .training-level-badge {
+      flex-shrink: 0;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: white;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .badge-l1 {
+      background: linear-gradient(135deg, var(--blue), var(--blue-mid));
+    }
+
+    .badge-l2 {
+      background: linear-gradient(135deg, var(--green), var(--green-mid));
+    }
+
+    .badge-l3 {
+      background: linear-gradient(135deg, var(--amber), var(--amber-mid));
+    }
+
+    .badge-l4 {
+      background: linear-gradient(135deg, var(--purple), var(--purple-mid));
+    }
+
+    .training-header-text h2 {
+      margin-bottom: 0.35rem;
+    }
+
+    .training-focus {
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.65;
+      max-width: 600px;
+    }
+
+    .training-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 100px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+
+    .tl-1 {
+      background: var(--blue-xlight);
+      color: var(--blue);
+      border: 1px solid var(--blue-light);
+    }
+
+    .tl-2 {
+      background: var(--green-xlight);
+      color: var(--green);
+      border: 1px solid var(--green-light);
+    }
+
+    .tl-3 {
+      background: var(--amber-xlight);
+      color: var(--amber);
+      border: 1px solid var(--amber-light);
+    }
+
+    .tl-4 {
+      background: var(--purple-xlight);
+      color: var(--purple);
+      border: 1px solid var(--purple-light);
+    }
+
+    .training-domains {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .domain-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.25rem;
+      transition: all 0.3s;
+    }
+
+    .domain-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-mid);
+    }
+
+    .domain-icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .domain-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .domain-topics {
+      list-style: none;
+    }
+
+    .domain-topics li {
+      font-size: 0.76rem;
+      color: var(--muted);
+      padding: 0.2rem 0 0.2rem 0.9rem;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .domain-topics li:last-child {
+      border-bottom: none;
+    }
+
+    .domain-topics li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      font-weight: 800;
+      color: var(--blue);
+      font-size: 0.9rem;
+    }
+
+    .training-outcomes {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+    }
+
+    .training-outcomes h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .outcomes-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .outcome-tag {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.78rem;
+      color: var(--body);
+      font-weight: 500;
+    }
+
+    @media (max-width: 960px) {
+      .training-domains {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .training-domains {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .training-header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .training-domains {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── METHODOLOGY ── */
+    #methodology {
+      background: var(--ink);
+      padding: 80px 5%;
+    }
+
+    .methodology-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .methodology-inner .section-label {
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .methodology-inner .section-label::before {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    }
+
+    .methodology-inner h2 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .methodology-inner>p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .method-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .method-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+    }
+
+    .method-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .method-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: white;
+      line-height: 1.4;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .highlight-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      text-align: left;
+    }
+
+    .hi-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: white;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .hi-text {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.55;
+    }
+
+    @media (max-width: 960px) {
+      .method-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .highlights-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .method-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── PARTNERS ── */
+    #partners {
+      background: white;
+      border-top: 1px solid var(--border);
+      padding: 80px 5%;
+    }
+
+    .partners-header {
+      text-align: center;
+      max-width: 580px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .partners-header .section-label {
+      justify-content: center;
+    }
+
+    .accreditation-bar {
+      background: linear-gradient(135deg, var(--blue-xlight), var(--purple-xlight));
+      border: 1px solid var(--blue-light);
+      border-radius: var(--radius);
+      padding: 2rem 3rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .accreditation-bar h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .accreditation-bar p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.65;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .accred-points {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .accred-point {
+      font-size: 0.78rem;
+      color: var(--blue);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .accred-point::before {
+      content: '✓';
+    }
+
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .partner-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      background: white;
+    }
+
+    .partner-logo-placeholder {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+    }
+
+    .plp-blue {
+      background: var(--blue-xlight);
+      border: 2px solid var(--blue-light);
+    }
+
+    .plp-dark {
+      background: var(--ink);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .plp-purple {
+      background: var(--purple-xlight);
+      border: 2px solid var(--purple-light);
+    }
+
+    .partner-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+
+    .partner-role {
+      font-size: 0.78rem;
+      color: var(--blue);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      font-style: italic;
+    }
+
+    .partner-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    @media (max-width: 768px) {
+      .partners-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="#main-content" class="sr-only"
+    style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- NAV -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">brighture</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About Us</a></li>
+      <li><a href="ai-labs.html">AI Labs</a></li>
+      <li><a href="ai-trainings.html" class="active" aria-current="page">AI Trainings</a></li>
+      <li><a href="ai-products.html">AI Products</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Toggle mobile menu"
+      aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html">About Us</a>
+    <a href="ai-labs.html">AI Labs</a>
+    <a href="ai-trainings.html" class="active">AI Trainings</a>
+    <a href="ai-products.html">AI Products</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <div class="page-hero" aria-label="AI Trainings hero">
+      <div class="page-hero-blob phb-1" aria-hidden="true"></div>
+      <div class="page-hero-blob phb-2" aria-hidden="true"></div>
+      <div class="page-hero-content">
+        <div class="page-hero-badge">AI Training Pathway</div>
+        <h1><span class="gradient-text">Learn. Build.</span><br>Innovate.</h1>
+        <p>Brighture AI Trainings are designed as a progressive, age-based learning journey where learners move from
+          exploration to engineering, innovation, and real-world deployment — across Robotics, IoT, Drones, VR/AR, and
+          Android App Development.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;">
+          <a href="contact.html" class="btn-primary">Enroll Now →</a>
+          <a href="#level1" class="btn-secondary">View Pathway</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-strip">
+      <div class="stat-item reveal">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Training Levels</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Technology Domains</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Hands-on Learning</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+    </div>
+
+    <!-- LEVEL 1 -->
+    <div class="training-section" id="level1">
+      <div class="training-inner">
+        <div class="training-header">
+          <div class="training-level-badge badge-l1" aria-label="Level 1">L1</div>
+          <div class="training-header-text">
+            <div class="training-label tl-1">🟦 Level 1 — Explorer</div>
+            <h2>Explorer — Foundation Stage</h2>
+            <p class="training-focus">Introduction to technology through creativity and basic logic building. Designed
+              for learners taking their very first steps into the world of AI, robotics, and intelligent systems.</p>
+          </div>
+        </div>
+        <div class="training-domains">
+          <div class="domain-card reveal">
+            <div class="domain-icon">🤖</div>
+            <div class="domain-name">Robotics</div>
+            <ul class="domain-topics">
+              <li>Basic electronics and circuits</li>
+              <li>Simple robot building</li>
+              <li>Block-based programming (Scratch)</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-1">
+            <div class="domain-icon">📡</div>
+            <div class="domain-name">IoT</div>
+            <ul class="domain-topics">
+              <li>Introduction to sensors</li>
+              <li>Smart devices concept</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-2">
+            <div class="domain-icon">🚁</div>
+            <div class="domain-name">Drone</div>
+            <ul class="domain-topics">
+              <li>Basic drone concepts</li>
+              <li>Flight and controls</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-3">
+            <div class="domain-icon">🥽</div>
+            <div class="domain-name">VR &amp; AR</div>
+            <ul class="domain-topics">
+              <li>Introduction to virtual environments</li>
+              <li>Interactive storytelling</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-4">
+            <div class="domain-icon">📱</div>
+            <div class="domain-name">Android Apps</div>
+            <ul class="domain-topics">
+              <li>Visual app creation</li>
+              <li>Drag-and-drop tools</li>
+            </ul>
+          </div>
+        </div>
+        <div class="training-outcomes reveal">
+          <h4>Learning Outcomes</h4>
+          <div class="outcomes-list">
+            <span class="outcome-tag">Logical thinking</span>
+            <span class="outcome-tag">Creativity and curiosity</span>
+            <span class="outcome-tag">Basic coding skills</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEVEL 2 -->
+    <div class="training-section" id="level2">
+      <div class="training-inner">
+        <div class="training-header">
+          <div class="training-level-badge badge-l2" aria-label="Level 2">L2</div>
+          <div class="training-header-text">
+            <div class="training-label tl-2">🟩 Level 2 — Builder</div>
+            <h2>Builder — Intermediate Stage</h2>
+            <p class="training-focus">Applied learning with real systems and programming. Students move beyond the
+              basics and start working with real hardware, writing code, and building functional systems.</p>
+          </div>
+        </div>
+        <div class="training-domains">
+          <div class="domain-card reveal">
+            <div class="domain-icon">🤖</div>
+            <div class="domain-name">Robotics</div>
+            <ul class="domain-topics">
+              <li>Arduino-based robotics</li>
+              <li>Bluetooth-controlled robots</li>
+              <li>Automation logic</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-1">
+            <div class="domain-icon">📡</div>
+            <div class="domain-name">IoT</div>
+            <ul class="domain-topics">
+              <li>Smart home systems</li>
+              <li>Raspberry Pi basics</li>
+              <li>Sensor integration</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-2">
+            <div class="domain-icon">🚁</div>
+            <div class="domain-name">Drone</div>
+            <ul class="domain-topics">
+              <li>Drone physics and stability</li>
+              <li>Block-based drone coding</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-3">
+            <div class="domain-icon">🥽</div>
+            <div class="domain-name">VR &amp; AR</div>
+            <ul class="domain-topics">
+              <li>Unity basics</li>
+              <li>3D environments</li>
+              <li>Interactive VR scenes</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-4">
+            <div class="domain-icon">📱</div>
+            <div class="domain-name">Android Apps</div>
+            <ul class="domain-topics">
+              <li>MIT App Inventor</li>
+              <li>App UI/UX design</li>
+              <li>Functional app development</li>
+            </ul>
+          </div>
+        </div>
+        <div class="training-outcomes reveal">
+          <h4>Learning Outcomes</h4>
+          <div class="outcomes-list">
+            <span class="outcome-tag">Problem-solving skills</span>
+            <span class="outcome-tag">Engineering fundamentals</span>
+            <span class="outcome-tag">Real project building</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEVEL 3 -->
+    <div class="training-section" id="level3">
+      <div class="training-inner">
+        <div class="training-header">
+          <div class="training-level-badge badge-l3" aria-label="Level 3">L3</div>
+          <div class="training-header-text">
+            <div class="training-label tl-3">🟨 Level 3 — Innovator</div>
+            <h2>Innovator — Advanced Stage</h2>
+            <p class="training-focus">Engineering systems and real-world applications. At this level, students design
+              and build complete intelligent systems — integrating AI, robotics, and cloud technologies to solve real
+              challenges.</p>
+          </div>
+        </div>
+        <div class="training-domains">
+          <div class="domain-card reveal">
+            <div class="domain-icon">🤖</div>
+            <div class="domain-name">Robotics</div>
+            <ul class="domain-topics">
+              <li>Advanced robotics systems</li>
+              <li>Autonomous navigation</li>
+              <li>AI-integrated robots</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-1">
+            <div class="domain-icon">📡</div>
+            <div class="domain-name">IoT</div>
+            <ul class="domain-topics">
+              <li>AI-powered IoT systems</li>
+              <li>Data communication</li>
+              <li>Smart infrastructure</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-2">
+            <div class="domain-icon">🚁</div>
+            <div class="domain-name">Drone</div>
+            <ul class="domain-topics">
+              <li>Autonomous drone systems</li>
+              <li>Computer vision for drones</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-3">
+            <div class="domain-icon">🥽</div>
+            <div class="domain-name">VR &amp; AR</div>
+            <ul class="domain-topics">
+              <li>C# programming</li>
+              <li>Advanced Unity development</li>
+              <li>AR applications</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-4">
+            <div class="domain-icon">📱</div>
+            <div class="domain-name">Android Apps</div>
+            <ul class="domain-topics">
+              <li>Full app development lifecycle</li>
+              <li>API integration</li>
+              <li>AI-based mobile apps</li>
+            </ul>
+          </div>
+        </div>
+        <div class="training-outcomes reveal">
+          <h4>Learning Outcomes</h4>
+          <div class="outcomes-list">
+            <span class="outcome-tag">System design skills</span>
+            <span class="outcome-tag">AI &amp; automation understanding</span>
+            <span class="outcome-tag">Real-world application development</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEVEL 4 -->
+    <div class="training-section" id="level4">
+      <div class="training-inner">
+        <div class="training-header">
+          <div class="training-level-badge badge-l4" aria-label="Level 4">L4</div>
+          <div class="training-header-text">
+            <div class="training-label tl-4">🟪 Level 4 — AI Specialist</div>
+            <h2>AI Specialist — Professional Level</h2>
+            <p class="training-focus">Advanced AI systems, product development, and research. This is the professional
+              tier — designed for learners ready to develop industry-grade AI products, multi-agent systems, and
+              cutting-edge research projects.</p>
+          </div>
+        </div>
+        <div class="training-domains">
+          <div class="domain-card reveal">
+            <div class="domain-icon">🤖</div>
+            <div class="domain-name">Robotics</div>
+            <ul class="domain-topics">
+              <li>AI robotics systems</li>
+              <li>Multi-agent robotics</li>
+              <li>Industrial automation</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-1">
+            <div class="domain-icon">📡</div>
+            <div class="domain-name">IoT</div>
+            <ul class="domain-topics">
+              <li>Edge AI systems</li>
+              <li>Cloud-integrated IoT</li>
+              <li>Industrial IoT</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-2">
+            <div class="domain-icon">🚁</div>
+            <div class="domain-name">Drone</div>
+            <ul class="domain-topics">
+              <li>Autonomous navigation systems</li>
+              <li>Drone AI and mapping</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-3">
+            <div class="domain-icon">🥽</div>
+            <div class="domain-name">VR &amp; AR</div>
+            <ul class="domain-topics">
+              <li>Simulation environments</li>
+              <li>Digital twin systems</li>
+            </ul>
+          </div>
+          <div class="domain-card reveal reveal-delay-4">
+            <div class="domain-icon">📱</div>
+            <div class="domain-name">Android Apps</div>
+            <ul class="domain-topics">
+              <li>AI-integrated applications</li>
+              <li>Scalable mobile systems</li>
+            </ul>
+          </div>
+        </div>
+        <div class="training-outcomes reveal">
+          <h4>Learning Outcomes</h4>
+          <div class="outcomes-list">
+            <span class="outcome-tag">AI product development</span>
+            <span class="outcome-tag">Research and innovation capability</span>
+            <span class="outcome-tag">Industry readiness</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- METHODOLOGY -->
+    <section id="methodology" aria-labelledby="method-title">
+      <div class="methodology-inner">
+        <div class="section-label">Learning Methodology</div>
+        <h2 id="method-title">How We Teach</h2>
+        <p>Brighture training follows a hands-on experiential model. Students build real systems instead of only
+          learning theory — aligning with modern EdTech approaches and industry expectations.</p>
+        <div class="method-grid">
+          <div class="method-item reveal">
+            <div class="method-icon">🏗️</div>
+            <div class="method-name">Project-Based Learning</div>
+          </div>
+          <div class="method-item reveal reveal-delay-1">
+            <div class="method-icon">🔧</div>
+            <div class="method-name">Real Hardware Kits</div>
+          </div>
+          <div class="method-item reveal reveal-delay-2">
+            <div class="method-icon">🖥️</div>
+            <div class="method-name">Simulation Environments</div>
+          </div>
+          <div class="method-item reveal reveal-delay-3">
+            <div class="method-icon">🤖</div>
+            <div class="method-name">AI-Assisted Learning</div>
+          </div>
+          <div class="method-item reveal reveal-delay-4">
+            <div class="method-icon">🌍</div>
+            <div class="method-name">Industry-Relevant Problem Solving</div>
+          </div>
+        </div>
+        <div class="highlights-grid">
+          <div class="highlight-item reveal">
+            <div class="hi-icon">✓</div>
+            <div class="hi-text">No prior coding required at beginner levels — start from absolute basics.</div>
+          </div>
+          <div class="highlight-item reveal reveal-delay-1">
+            <div class="hi-icon">✓</div>
+            <div class="hi-text">Progressive learning path from fundamentals to advanced AI systems.</div>
+          </div>
+          <div class="highlight-item reveal reveal-delay-2">
+            <div class="hi-icon">✓</div>
+            <div class="hi-text">Real-world project development at every stage of the journey.</div>
+          </div>
+          <div class="highlight-item reveal">
+            <div class="hi-icon">✓</div>
+            <div class="hi-text">Certification awarded at each level — plus proof of work through actual builds.</div>
+          </div>
+          <div class="highlight-item reveal reveal-delay-1">
+            <div class="hi-icon">✓</div>
+            <div class="hi-text">Innovation challenges and hackathons to test skills competitively.</div>
+          </div>
+          <div class="highlight-item reveal reveal-delay-2">
+            <div class="hi-icon">✓</div>
+            <div class="hi-text">School curriculum-aligned yet designed to go far beyond the classroom.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section id="partners" aria-labelledby="partners-title">
+      <div class="partners-header reveal">
+        <div class="section-label">Accreditation &amp; Partnerships</div>
+        <h2 id="partners-title">Trusted. Accredited.<br>Globally Aligned.</h2>
+        <p class="section-desc" style="margin:0 auto;text-align:center;">Brighture collaborates with leading global
+          technology ecosystems and follows internationally recognized standards in AI, robotics, and innovation
+          education.</p>
+      </div>
+      <div class="accreditation-bar reveal">
+        <h3>Global Recognition &amp; Standards</h3>
+        <p>Our programs are internationally aligned, industry-relevant, and globally benchmarked — ensuring every
+          learner is equipped for the future of work.</p>
+        <div class="accred-points">
+          <span class="accred-point">Internationally aligned STEM-based innovation framework</span>
+          <span class="accred-point">Industry-relevant curriculum and hands-on learning methodology</span>
+          <span class="accred-point">Globally benchmarked AI and robotics lab design</span>
+        </div>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-card reveal">
+          <div class="partner-logo-placeholder plp-dark">🎮</div>
+          <div class="partner-name">Unity</div>
+          <div class="partner-role">3D, VR/AR Platform — Simulation and Digital Twin Environments</div>
+          <p class="partner-desc">Unity powers our immersive VR/AR curriculum, simulation environments, and digital twin
+            experiences across Level 3 and Level 4 programs.</p>
+        </div>
+        <div class="partner-card reveal reveal-delay-1">
+          <div class="partner-logo-placeholder plp-blue">🚁</div>
+          <div class="partner-name">DJI</div>
+          <div class="partner-role">Drone Technology Leader</div>
+          <p class="partner-desc">DJI's drone platforms are integrated across our Drone domain training — from basic
+            flight concepts at Level 1 to autonomous navigation systems at Level 4.</p>
+        </div>
+        <div class="partner-card reveal reveal-delay-2">
+          <div class="partner-logo-placeholder plp-purple">⚡</div>
+          <div class="partner-name">SP Robotics Works</div>
+          <div class="partner-role">SPARKY — AI Learning Platform</div>
+          <p class="partner-desc">SP Robotics Works powers the Brighture LMS through the SPARKY AI learning platform —
+            enabling adaptive, personalized, and hands-on learning experiences for every student.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="page-cta" aria-label="Call to action">
+      <div class="page-cta-inner">
+        <div class="section-label" style="justify-content:center;color:rgba(255,255,255,0.6);">Get Started</div>
+        <h2>Ready to Build the Future of Innovation?</h2>
+        <p>Whether you are planning to establish an AI Innovation Lab, explore robotics and intelligent systems, or
+          deploy AI-powered industrial solutions — the Brighture team is ready to support your journey.</p>
+        <div class="page-cta-actions">
+          <a href="contact.html" class="cta-btn-white">Contact Us →</a>
+          <a href="ai-labs.html" class="cta-btn-ghost">Explore AI Labs</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">brighture</a>
+        <p>Engineering Human Intelligence for the AI Future. Building AI Innovation Labs, robotics ecosystems, and
+          future skills infrastructure globally.</p>
+        <div style="margin-top:1.25rem;font-size:0.75rem;color:rgba(255,255,255,0.3);">innovate@brightureglobal.com
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="ai-labs.html">AI Labs</a></li>
+          <li><a href="ai-trainings.html">AI Trainings</a></li>
+          <li><a href="ai-products.html">AI Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Training Levels</h4>
+        <ul>
+          <li><a href="#level1">Explorer — Level 1</a></li>
+          <li><a href="#level2">Builder — Level 2</a></li>
+          <li><a href="#level3">Innovator — Level 3</a></li>
+          <li><a href="#level4">AI Specialist — Level 4</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="mailto:innovate@brightureglobal.com">Send an Email</a></li>
+          <li><a href="https://www.brightureglobal.com" target="_blank" rel="noopener">Website</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Brighture Global. All rights reserved.</p>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shared.js" defer></script>
+</body>
+
+</html>

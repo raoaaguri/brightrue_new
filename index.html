@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brighture — Engineering Human Intelligence for the AI Future</title>
+  <meta name="description"
+    content="Brighture is a global innovation platform building AI Innovation Labs, robotics ecosystems, and future skills infrastructure for institutions and enterprises worldwide.">
+  <meta name="keywords"
+    content="AI Innovation Labs, Robotics Ecosystems, Future Skills, Brighture, Artificial Intelligence Education, STEM Labs">
+  <!-- Open Graph / AI SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Brighture — Engineering Human Intelligence for the AI Future">
+  <meta property="og:description"
+    content="Brighture empowers institutions and enterprises to build world-class AI Innovation Labs, robotics ecosystems, and future skills infrastructure.">
+  <meta property="og:url" content="https://www.brightureglobal.com/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1a56ff">
+  <link rel="canonical" href="https://www.brightureglobal.com/">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Roboto:wght@400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 110px 5% 80px;
+      background: linear-gradient(135deg, #fafbff 0%, #f0f4ff 40%, #f5f0ff 70%, #fff8f4 100%);
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(26, 86, 255, 0.065) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
+
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(70px);
+      pointer-events: none;
+    }
+
+    .hero-blob-1 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(26, 86, 255, 0.18), transparent 70%);
+      top: -8%;
+      right: 5%;
+      animation: blobFloat 10s ease-in-out infinite;
+    }
+
+    .hero-blob-2 {
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(124, 58, 237, 0.14), transparent 70%);
+      bottom: 5%;
+      left: -3%;
+      animation: blobFloat 13s ease-in-out infinite reverse;
+    }
+
+    .hero-blob-3 {
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(234, 108, 0, 0.12), transparent 70%);
+      top: 35%;
+      left: 42%;
+      animation: blobFloat 9s ease-in-out infinite;
+      animation-delay: -3s;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 660px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      border: 1px solid var(--blue-light);
+      border-radius: 100px;
+      padding: 0.35rem 1rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-sm);
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--blue);
+      animation: blink 2s infinite;
+    }
+
+    .hero-title {
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s 0.1s ease both;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 560px;
+      margin-bottom: 2rem;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+
+    .hero-pillars {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+
+    .pillar-tag {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--body);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeUp 0.8s 0.4s ease both;
+    }
+
+    .hero-visual {
+      position: absolute;
+      right: 4%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 420px;
+      height: 420px;
+      display: none;
+    }
+
+    @media (min-width: 1100px) {
+      .hero-visual {
+        display: block;
+      }
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(26, 86, 255, 0.15);
+    }
+
+    .hero-ring {
+      position: absolute;
+      border-radius: 50%;
+      animation: ringRotate 20s linear infinite;
+    }
+
+    .ring-1 {
+      inset: 0;
+      border: 1.5px solid rgba(26, 86, 255, 0.2);
+    }
+
+    .ring-2 {
+      inset: 30px;
+      border: 1.5px solid rgba(124, 58, 237, 0.18);
+      animation-duration: 15s;
+      animation-direction: reverse;
+    }
+
+    .ring-3 {
+      inset: 60px;
+      border: 1.5px solid rgba(234, 108, 0, 0.15);
+      animation-duration: 25s;
+    }
+
+    .ring-dot {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--blue);
+      top: -4.5px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 14px rgba(26, 86, 255, 0.6);
+    }
+
+    .ring-dot-purple {
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--purple);
+      bottom: -3.5px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
+    }
+
+    .hero-core {
+      position: absolute;
+      inset: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(26, 86, 255, 0.08), rgba(124, 58, 237, 0.06));
+      border: 1px solid rgba(26, 86, 255, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-core-text {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      line-height: 2;
+    }
+
+    /* ── ABOUT ── */
+    #about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      background: var(--bg-alt);
+    }
+
+    .about-visual {
+      position: relative;
+      height: 480px;
+    }
+
+    .about-bg-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(26, 86, 255, 0.08) 1px, transparent 1px);
+      background-size: 22px 22px;
+      border-radius: 20px;
+      z-index: 0;
+    }
+
+    .about-card {
+      position: absolute;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .about-card-main {
+      inset: 0 40px 40px 0;
+      background: linear-gradient(135deg, var(--blue-xlight), var(--purple-xlight));
+      border-color: var(--blue-light);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .about-card-float {
+      width: 195px;
+      right: 0;
+      bottom: 60px;
+      background: white;
+      z-index: 2;
+      animation: cardFloat 6s ease-in-out infinite;
+    }
+
+    .about-card-float2 {
+      width: 175px;
+      top: 10px;
+      left: 20px;
+      background: white;
+      z-index: 2;
+      animation: cardFloat 8s ease-in-out infinite;
+      animation-delay: -3s;
+    }
+
+    .card-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+
+    .card-sub {
+      font-size: 0.73rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-top: 2.5rem;
+    }
+
+    .value-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .value-item:hover {
+      border-color: var(--blue-mid);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .value-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 0.2rem;
+    }
+
+    .value-desc {
+      font-size: 0.76rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .mission-box {
+      margin-top: 2rem;
+      background: linear-gradient(135deg, var(--blue-xlight), var(--purple-xlight));
+      border: 1px solid var(--blue-light);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .mission-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.6rem;
+    }
+
+    .mission-text {
+      font-size: 0.95rem;
+      color: var(--ink);
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    @media (max-width: 960px) {
+      #about {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .about-visual {
+        display: none;
+      }
+    }
+
+    /* ── FRAMEWORK ── */
+    #framework {
+      background: white;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .framework-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 4rem;
+    }
+
+    .framework-header .section-label {
+      justify-content: center;
+    }
+
+    .framework-header .section-desc {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* ── LABS ── */
+    #labs {
+      background: var(--bg-alt);
+    }
+
+    .labs-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+      margin-bottom: 3.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .labs-header {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    /* ── JOURNEY ── */
+    #journey {
+      background: white;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .journey-inner {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .journey-track {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      position: relative;
+    }
+
+    .journey-track::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--purple), var(--orange));
+    }
+
+    .journey-step {
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .step-circle {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: white;
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s;
+    }
+
+    .journey-step:hover .step-circle {
+      transform: scale(1.08);
+    }
+
+    .sc-1 {
+      background: linear-gradient(135deg, var(--blue), var(--blue-mid));
+      box-shadow: 0 6px 20px rgba(26, 86, 255, 0.35);
+    }
+
+    .sc-2 {
+      background: linear-gradient(135deg, var(--purple), var(--purple-mid));
+      box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+    }
+
+    .sc-3 {
+      background: linear-gradient(135deg, var(--orange), var(--orange-mid));
+      box-shadow: 0 6px 20px rgba(234, 108, 0, 0.3);
+    }
+
+    .sc-4 {
+      background: linear-gradient(135deg, var(--blue-dark), var(--purple));
+      box-shadow: 0 6px 20px rgba(26, 86, 255, 0.3);
+    }
+
+    .journey-step h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .journey-step p {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    @media (max-width: 768px) {
+      .journey-track {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+      }
+
+      .journey-track::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .journey-track {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── PACKAGES ── */
+    #packages {
+      background: var(--bg-alt);
+    }
+
+    .packages-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 4rem;
+    }
+
+    .packages-header .section-label {
+      justify-content: center;
+    }
+
+    /* ── LMS ── */
+    #lms {
+      background: white;
+      border-top: 1px solid var(--border);
+    }
+
+    .lms-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 4rem;
+    }
+
+    .lms-header .section-label {
+      justify-content: center;
+    }
+
+    .lms-features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .lms-feature-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+
+    .lms-feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      background: white;
+    }
+
+    .lms-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .lms-feature-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .lms-feature-card p {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .lms-compare-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .lms-compare-title h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .lms-compare-title p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .lms-table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 3rem;
+    }
+
+    .lms-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      min-width: 560px;
+    }
+
+    .lms-table thead tr {
+      background: var(--ink);
+    }
+
+    .lms-table thead th {
+      padding: 1rem 1.25rem;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.5);
+      border: none;
+      text-align: center;
+    }
+
+    .lms-table thead th:first-child {
+      text-align: left;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .lms-th-brighture {
+      color: #60a5fa !important;
+    }
+
+    .lms-th-trad {
+      color: rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .lms-th-gen {
+      color: rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .lms-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    .lms-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .lms-table tbody tr:hover {
+      background: #f8faff;
+    }
+
+    .lms-table tbody td {
+      padding: 0.875rem 1.25rem;
+      font-size: 0.82rem;
+      color: var(--body);
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .lms-table tbody td:first-child {
+      text-align: left;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 0.8rem;
+    }
+
+    .lms-yes {
+      color: #059669;
+      font-weight: 700;
+    }
+
+    .lms-no {
+      color: #ef4444;
+      font-weight: 700;
+    }
+
+    .lms-partial {
+      color: var(--amber);
+      font-weight: 700;
+    }
+
+    .lms-discover {
+      background: linear-gradient(135deg, var(--blue-xlight), var(--purple-xlight));
+      border: 1px solid var(--blue-light);
+      border-radius: var(--radius);
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .lms-discover h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .lms-discover p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 540px;
+      margin: 0 auto 2rem;
+    }
+
+    .lms-powered {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 1rem;
+    }
+
+    /* ── PAGE CTA ── */
+    .page-cta {
+      background: linear-gradient(135deg, var(--ink) 0%, #1e2d5a 50%, #2d1b69 100%);
+      padding: 80px 5%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .page-cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .page-cta h2 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .page-cta p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+
+    .page-cta-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── GLOBAL ── */
+    #global {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+    }
+
+    .global-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .locations-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    .location-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      transition: all 0.2s;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .location-item:hover {
+      border-color: var(--blue-mid);
+      box-shadow: var(--shadow);
+      transform: translateX(4px);
+    }
+
+    .loc-flag {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .loc-info h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.1rem;
+    }
+
+    .loc-info p {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .global-message {
+      background: linear-gradient(135deg, var(--blue-xlight), var(--purple-xlight));
+      border: 1px solid var(--blue-light);
+      border-radius: 20px;
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .global-message::before {
+      content: '"';
+      position: absolute;
+      top: -1.5rem;
+      left: 1.5rem;
+      font-family: 'Syne', sans-serif;
+      font-size: 9rem;
+      font-weight: 800;
+      color: rgba(26, 86, 255, 0.06);
+      line-height: 1;
+    }
+
+    .global-message blockquote {
+      font-size: 1.05rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .global-message cite {
+      font-size: 0.78rem;
+      font-style: normal;
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    .why-grid {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .why-box {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .why-box-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+
+    .why-box-title.blue {
+      color: var(--blue);
+    }
+
+    .why-box-title.orange {
+      color: var(--orange);
+    }
+
+    .why-list li {
+      font-size: 0.77rem;
+      color: var(--body);
+      padding: 0.22rem 0 0.22rem 1rem;
+      position: relative;
+    }
+
+    .why-list li span {
+      position: absolute;
+      left: 0;
+    }
+
+    .why-list li span.b {
+      color: var(--blue);
+    }
+
+    .why-list li span.o {
+      color: var(--orange);
+    }
+
+    @media (max-width: 960px) {
+      .global-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+
+      .why-grid,
+      .lms-features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SKIP LINK (Accessibility) -->
+  <a href="#main-content" class="sr-only"
+    style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;background:var(--blue);color:white;padding:0.5rem 1rem;z-index:9999;border-radius:4px;">Skip
+    to main content</a>
+
+  <!-- NAV -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Brighture Home">brighture</a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html" class="active" aria-current="page">About Us</a></li>
+      <li><a href="ai-labs.html">AI Labs</a></li>
+      <li><a href="ai-trainings.html">AI Trainings</a></li>
+      <li><a href="ai-products.html">AI Products</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Toggle mobile menu"
+      aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html" class="active">About Us</a>
+    <a href="ai-labs.html">AI Labs</a>
+    <a href="ai-trainings.html">AI Trainings</a>
+    <a href="ai-products.html">AI Products</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section id="hero" aria-label="Hero">
+      <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-badge" aria-label="Global Innovation Platform">Global Innovation Platform</div>
+        <h1 class="hero-title">Engineering<br><span class="gradient-text">Human Intelligence</span><br>for the AI Future
+        </h1>
+        <p class="hero-sub">Brighture empowers institutions and enterprises to build world-class AI Innovation Labs,
+          robotics ecosystems, and future skills infrastructure — where ideas become intelligent systems.</p>
+        <div class="hero-pillars" aria-label="Core offerings">
+          <span class="pillar-tag">🤖 AI Innovation Labs</span>
+          <span class="pillar-tag">⚙️ Robotics Ecosystems</span>
+          <span class="pillar-tag">🎓 Future Skills Platforms</span>
+        </div>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn-primary">Start Your Innovation Journey →</a>
+          <a href="ai-labs.html" class="btn-secondary">Explore AI Labs</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="images/Brighture Global Innovation Lab Framework.webp" alt="Brighture Global Innovation Lab Framework"
+          class="hero-image">
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-strip" aria-label="Key statistics">
+      <div class="stat-item reveal">
+        <div class="stat-num">4+</div>
+        <div class="stat-label">Global Locations</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Specialized Labs</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Innovation Programs</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Possibilities</div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="about-visual" aria-hidden="true">
+        <div class="about-bg-pattern"></div>
+        <div class="about-card about-card-main">
+          <div style="font-size:3rem;margin-bottom:1rem;">🧠</div>
+          <div
+            style="font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;">
+            Global Innovation Platform</div>
+          <div style="font-size:0.8rem;color:var(--muted);line-height:1.6;">Building AI innovation ecosystems for
+            institutions and enterprises worldwide.</div>
+        </div>
+        <div class="about-card about-card-float">
+          <div class="card-icon">🤖</div>
+          <div class="card-title">AI Innovation Labs</div>
+          <div class="card-sub">Advanced AI systems and data-driven intelligence environments.</div>
+        </div>
+        <div class="about-card about-card-float2">
+          <div class="card-icon">🚀</div>
+          <div class="card-title">Future Skills</div>
+          <div class="card-sub">Building next-generation engineers and technology leaders.</div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">About Brighture</div>
+        <h2 class="section-title" id="about-title">Engineering Innovation<br>Ecosystems, Globally</h2>
+        <p class="section-desc">Brighture is a global innovation platform focused on building AI Innovation Labs,
+          robotics ecosystems, and future skills infrastructure for institutions and enterprises.</p>
+        <p class="section-desc" style="margin-top:1rem;">Through the Brighture Global Innovation Lab Framework, we
+          enable schools, universities, research centers, and organizations to create hands-on environments where
+          artificial intelligence, robotics, and emerging technologies are explored through experimentation and
+          real-world problem solving.</p>
+        <div class="values-grid" aria-label="Core values">
+          <div class="value-item reveal">
+            <div class="value-name">Innovation</div>
+            <div class="value-desc">Encouraging creativity and experimentation at every level.</div>
+          </div>
+          <div class="value-item reveal reveal-delay-1">
+            <div class="value-name">Human Intelligence</div>
+            <div class="value-desc">Empowering people through transformative technology.</div>
+          </div>
+          <div class="value-item reveal reveal-delay-2">
+            <div class="value-name">Engineering Excellence</div>
+            <div class="value-desc">Building world-class technology platforms and infrastructure.</div>
+          </div>
+          <div class="value-item reveal">
+            <div class="value-name">Collaboration</div>
+            <div class="value-desc">Connecting educators, engineers, and innovators globally.</div>
+          </div>
+          <div class="value-item reveal reveal-delay-1">
+            <div class="value-name">Integrity</div>
+            <div class="value-desc">Advancing responsible and ethical innovation.</div>
+          </div>
+          <div class="value-item reveal reveal-delay-2">
+            <div class="value-name">Sustainability</div>
+            <div class="value-desc">Enabling technologies that improve efficiency and safety responsibly.</div>
+          </div>
+        </div>
+        <div class="mission-box reveal">
+          <div class="mission-label">Our Mission</div>
+          <p class="mission-text">To engineer innovation ecosystems that empower institutions and enterprises to develop
+            technologies and talent for the AI-driven future.</p>
+        </div>
+        <div class="mission-box reveal"
+          style="margin-top:1rem;background:linear-gradient(135deg,var(--purple-xlight),var(--blue-xlight));border-color:var(--purple-light);">
+          <div class="mission-label" style="color:var(--purple);">Our Vision</div>
+          <p class="mission-text">To advance human intelligence and innovation in the age of artificial intelligence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRAMEWORK -->
+    <section id="framework" aria-labelledby="framework-title">
+      <div class="framework-header reveal">
+        <div class="section-label">Our Framework</div>
+        <h2 class="section-title" id="framework-title">The Brighture Global<br>Innovation Lab Framework</h2>
+        <p class="section-desc">We empower institutions to build world-class ecosystems for artificial intelligence,
+          robotics, and emerging technologies — turning classrooms into hands-on innovation environments where ideas
+          become intelligent systems.</p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card pc-1 reveal">
+          <div class="pillar-num" aria-hidden="true">01</div>
+          <div class="pillar-icon pi-1" aria-hidden="true">🖥️</div>
+          <h3>Technology Infrastructure</h3>
+          <p>Innovation begins with access to the right tools and platforms.</p>
+          <ul class="pillar-list">
+            <li>Artificial intelligence platforms</li>
+            <li>Robotics systems</li>
+            <li>Embedded hardware platforms</li>
+            <li>Intelligent sensors and IoT devices</li>
+            <li>Autonomous systems platforms</li>
+            <li>Computer vision technologies</li>
+          </ul>
+        </div>
+        <div class="pillar-card pc-2 reveal reveal-delay-1">
+          <div class="pillar-num" aria-hidden="true">02</div>
+          <div class="pillar-icon pi-2" aria-hidden="true">🔬</div>
+          <h3>Experiential Learning</h3>
+          <p>Innovation happens through experimentation and hands-on exploration.</p>
+          <ul class="pillar-list">
+            <li>Build robotics systems</li>
+            <li>Train AI models</li>
+            <li>Develop smart devices</li>
+            <li>Design automation solutions</li>
+            <li>Test autonomous systems</li>
+          </ul>
+        </div>
+        <div class="pillar-card pc-3 reveal reveal-delay-2">
+          <div class="pillar-num" aria-hidden="true">03</div>
+          <div class="pillar-icon pi-3" aria-hidden="true">💡</div>
+          <h3>Innovation Culture</h3>
+          <p>Ecosystems thrive when creativity, experimentation, and collaboration are encouraged.</p>
+          <ul class="pillar-list">
+            <li>Explore new ideas</li>
+            <li>Experiment with emerging technologies</li>
+            <li>Collaborate across disciplines</li>
+            <li>Solve real-world problems</li>
+          </ul>
+        </div>
+        <div class="pillar-card pc-4 reveal reveal-delay-3">
+          <div class="pillar-num" aria-hidden="true">04</div>
+          <div class="pillar-icon pi-4" aria-hidden="true">🏛️</div>
+          <h3>Institutional Capability</h3>
+          <p>Helping institutions build long-term technology capabilities.</p>
+          <ul class="pillar-list">
+            <li>Educator enablement and training</li>
+            <li>Curriculum integration</li>
+            <li>Research program development</li>
+            <li>Innovation challenges and hackathons</li>
+            <li>Industry collaboration opportunities</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- LABS -->
+    <section id="labs" aria-labelledby="labs-title">
+      <div class="labs-header">
+        <div>
+          <div class="section-label">Lab Ecosystem</div>
+          <h2 class="section-title" id="labs-title">Six Specialized<br>Innovation Environments</h2>
+        </div>
+        <p class="section-desc">The Brighture framework integrates multiple innovation environments within a single
+          ecosystem — together creating a holistic environment covering every dimension of intelligent technology.</p>
+      </div>
+      <div class="labs-grid">
+        <div class="lab-card reveal"><span class="lab-tag">Core</span><span class="lab-emoji">🧠</span>
+          <h3>AI Innovation Lab</h3>
+          <p>Artificial intelligence systems and data-driven intelligence. The foundational lab for machine learning,
+            neural networks, and AI application development.</p>
+        </div>
+        <div class="lab-card reveal reveal-delay-1"><span class="lab-tag">Core</span><span class="lab-emoji">🤖</span>
+          <h3>Robotics Innovation Lab</h3>
+          <p>Design and development of robotic systems and automation. From simple actuators to complex robotic arms and
+            mobile platforms.</p>
+        </div>
+        <div class="lab-card reveal reveal-delay-2"><span class="lab-emoji">🔧</span>
+          <h3>Embedded Systems Lab</h3>
+          <p>Hardware platforms for intelligent connected devices. Microcontrollers, development boards, sensors, and
+            IoT integration environments.</p>
+        </div>
+        <div class="lab-card reveal"><span class="lab-emoji">👁️</span>
+          <h3>Computer Vision Lab</h3>
+          <p>AI systems that interpret visual environments. Object detection, image classification, and real-time video
+            analysis systems.</p>
+        </div>
+        <div class="lab-card reveal reveal-delay-1"><span class="lab-emoji">🚗</span>
+          <h3>Autonomous Systems Lab</h3>
+          <p>Development of intelligent machines that operate independently. Autonomous navigation, decision-making, and
+            self-directing system architectures.</p>
+        </div>
+        <div class="lab-card lab-card-featured reveal reveal-delay-2"><span class="lab-tag">Studio</span><span
+            class="lab-emoji">⚡</span>
+          <h3>Innovation Studio</h3>
+          <p>Rapid prototyping and technology product development. The creative hub where concepts transform into
+            functional prototypes and market-ready solutions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section id="journey" aria-labelledby="journey-title">
+      <div class="journey-inner reveal">
+        <div class="section-label" style="justify-content:center;">Innovation Journey</div>
+        <h2 class="section-title" id="journey-title" style="text-align:center;">From Discovery to<br>Advanced Innovation
+        </h2>
+        <p class="section-desc" style="text-align:center;margin:0 auto 4rem;">The Brighture framework supports a
+          progressive journey — taking participants from initial discovery all the way to research and entrepreneurship.
+        </p>
+      </div>
+      <div class="journey-track">
+        <div class="journey-step reveal">
+          <div class="step-circle sc-1" aria-label="Step 1">01</div>
+          <h3>Exploration</h3>
+          <p>Students discover emerging technologies through hands-on experimentation in a supportive innovation
+            environment.</p>
+        </div>
+        <div class="journey-step reveal reveal-delay-1">
+          <div class="step-circle sc-2" aria-label="Step 2">02</div>
+          <h3>Development</h3>
+          <p>Participants build real technology systems including robotics, AI models, and smart devices that solve real
+            problems.</p>
+        </div>
+        <div class="journey-step reveal reveal-delay-2">
+          <div class="step-circle sc-3" aria-label="Step 3">03</div>
+          <h3>Innovation</h3>
+          <p>Students develop solutions for real-world challenges using intelligent systems and cross-disciplinary
+            collaboration.</p>
+        </div>
+        <div class="journey-step reveal reveal-delay-3">
+          <div class="step-circle sc-4" aria-label="Step 4">04</div>
+          <h3>Research &amp; Entrepreneurship</h3>
+          <p>Advanced innovators explore research opportunities and technology entrepreneurship pathways.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section id="packages" aria-labelledby="packages-title">
+      <div class="packages-header reveal">
+        <div class="section-label">Innovation Programs</div>
+        <h2 class="section-title" id="packages-title">Choose Your<br>Innovation Path</h2>
+        <p class="section-desc" style="margin:0 auto;text-align:center;">Four structured programs — from foundational AI
+          exploration to full institutional innovation campuses. Each designed to grow with your institution's ambition.
+        </p>
+      </div>
+      <div class="program-cards">
+        <div class="prog-card pc-genesis reveal">
+          <div class="prog-accent" aria-hidden="true">🟦</div>
+          <div class="prog-name">Genesis</div>
+          <div class="prog-subtitle">For Early AI &amp; Robotics Learning</div>
+          <ul class="prog-features">
+            <li>Core Innovation Labs</li>
+            <li>Foundational AI &amp; Robotics</li>
+            <li>Hands-on Electronics &amp; IoT</li>
+            <li>Design Thinking Approach</li>
+          </ul>
+          <div class="prog-tag">Ideal for Schools &amp; Early University</div>
+        </div>
+        <div class="prog-card pc-accel reveal reveal-delay-1">
+          <div class="prog-accent" aria-hidden="true">🟩</div>
+          <div class="prog-name">Acceleration</div>
+          <div class="prog-subtitle">For Applied Engineering &amp; Prototyping</div>
+          <ul class="prog-features">
+            <li>Multi-domain Innovation Labs</li>
+            <li>AI, CV &amp; Edge Computing</li>
+            <li>Real-world Product Development</li>
+            <li>Simulation-based Learning</li>
+          </ul>
+          <div class="prog-tag">Ideal for Schools, Universities &amp; Skill Programs</div>
+        </div>
+        <div class="prog-card pc-discovery reveal reveal-delay-2">
+          <div class="prog-accent" aria-hidden="true">🟨</div>
+          <div class="prog-name">Discovery</div>
+          <div class="prog-subtitle">For Advanced Research &amp; Innovation</div>
+          <ul class="prog-features">
+            <li>Full-stack AI &amp; Robotics Labs</li>
+            <li>Autonomous Systems &amp; Drones</li>
+            <li>GPU-powered AI Infrastructure</li>
+            <li>Digital Twin &amp; Simulation</li>
+          </ul>
+          <div class="prog-tag">Ideal for Universities &amp; Research Centers</div>
+        </div>
+        <div class="prog-card pc-nexus reveal reveal-delay-3">
+          <div class="prog-accent" aria-hidden="true">🟪</div>
+          <div class="prog-name">Nexus Campus</div>
+          <div class="prog-subtitle">For Institutional AI Ecosystem</div>
+          <ul class="prog-features">
+            <li>End-to-End Innovation Campus</li>
+            <li>Industrial &amp; Physical AI Platforms</li>
+            <li>Smart Manufacturing Labs</li>
+            <li>Cloud + AI Compute Infrastructure</li>
+          </ul>
+          <div class="prog-tag">Ideal for Universities, Enterprises &amp; Governments</div>
+        </div>
+      </div>
+      <div class="every-pkg reveal">
+        <h4>Every Program Includes</h4>
+        <div class="every-grid">
+          <div class="every-item">
+            <div class="every-check" aria-hidden="true">✓</div>
+            <div class="every-text">Innovation Lab Design &amp; Planning</div>
+          </div>
+          <div class="every-item">
+            <div class="every-check" aria-hidden="true">✓</div>
+            <div class="every-text">Technology Infrastructure Deployment</div>
+          </div>
+          <div class="every-item">
+            <div class="every-check" aria-hidden="true">✓</div>
+            <div class="every-text">Hardware and Software Platforms</div>
+          </div>
+          <div class="every-item">
+            <div class="every-check" aria-hidden="true">✓</div>
+            <div class="every-text">Educator Training &amp; Enablement</div>
+          </div>
+          <div class="every-item">
+            <div class="every-check" aria-hidden="true">✓</div>
+            <div class="every-text">Project-Based Learning Frameworks</div>
+          </div>
+          <div class="every-item">
+            <div class="every-check" aria-hidden="true">✓</div>
+            <div class="every-text">Innovation Challenges &amp; Hackathons</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LMS -->
+    <section id="lms" aria-labelledby="lms-title">
+      <div class="lms-header reveal">
+        <div class="section-label">Learning Platform</div>
+        <h2 class="section-title" id="lms-title">Brighture LMS</h2>
+        <p class="section-desc">An AI-first digital learning environment delivering personalized, immersive, and
+          future-ready education experiences — designed for the innovators of tomorrow.</p>
+      </div>
+      <div class="lms-features-grid">
+        <div class="lms-feature-card reveal">
+          <div class="lms-icon">✨</div>
+          <h3>Adaptive AI Learning</h3>
+          <p>An intelligent system continuously analyzes learner behavior to dynamically adjust pace, difficulty, and
+            content delivery for optimal outcomes.</p>
+        </div>
+        <div class="lms-feature-card reveal reveal-delay-1">
+          <div class="lms-icon">📚</div>
+          <h3>Future-Tech Curriculum Stack</h3>
+          <p>A comprehensive ecosystem covering Programming (Scratch to Advanced), Robotics and Embedded Systems, Drones
+            and Automation, Computer Vision, Machine Learning, and AR/VR Development.</p>
+        </div>
+        <div class="lms-feature-card reveal reveal-delay-2">
+          <div class="lms-icon">🛠️</div>
+          <h3>Built for Real-World Skills</h3>
+          <p>A 100% practical learning model focused on building, experimentation, and real-world problem solving — not
+            just theory.</p>
+        </div>
+        <div class="lms-feature-card reveal">
+          <div class="lms-icon">🎯</div>
+          <h3>Personalized Growth Engine</h3>
+          <p>AI-driven assessments recommend tailored learning pathways aligned with each student's progress and
+            capability.</p>
+        </div>
+        <div class="lms-feature-card reveal reveal-delay-1">
+          <div class="lms-icon">🌐</div>
+          <h3>Connected Learning Ecosystem</h3>
+          <p>Enables collaboration, peer learning, and project showcasing within an innovation-driven community of
+            builders and creators.</p>
+        </div>
+        <div class="lms-feature-card reveal reveal-delay-2">
+          <div class="lms-icon">🏆</div>
+          <h3>Industry Alignment</h3>
+          <p>Curriculum and learning pathways are built to be relevant to real industry needs, ensuring learners are
+            job-ready and future-proof.</p>
+        </div>
+      </div>
+
+      <!-- Platform Comparison -->
+      <div class="lms-compare-title reveal">
+        <h3>Why Brighture LMS Stands Out</h3>
+        <p>Powered by innovation to empower the creators, engineers, and problem-solvers of tomorrow.</p>
+      </div>
+      <div class="lms-table-wrap reveal">
+        <table class="lms-table" aria-label="LMS platform comparison">
+          <thead>
+            <tr>
+              <th scope="col">Feature / Capability</th>
+              <th scope="col" class="lms-th-brighture">Brighture LMS</th>
+              <th scope="col" class="lms-th-trad">Traditional LMS</th>
+              <th scope="col" class="lms-th-gen">Generic EdTech</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AI Personalization</td>
+              <td><span class="lms-yes">✅ Advanced adaptive AI</span></td>
+              <td><span class="lms-no">❌ None</span></td>
+              <td><span class="lms-partial">⚠️ Limited</span></td>
+            </tr>
+            <tr>
+              <td>Practical Learning</td>
+              <td><span class="lms-yes">✅ 100% hands-on</span></td>
+              <td><span class="lms-partial">⚠️ Minimal</span></td>
+              <td><span class="lms-partial">⚠️ Partial</span></td>
+            </tr>
+            <tr>
+              <td>Future-Tech Courses</td>
+              <td><span class="lms-yes">✅ AI, Robotics, CV, Drones, AR/VR</span></td>
+              <td><span class="lms-no">❌ Limited</span></td>
+              <td><span class="lms-partial">⚠️ Selective</span></td>
+            </tr>
+            <tr>
+              <td>Learning Pathways</td>
+              <td><span class="lms-yes">✅ Dynamic &amp; AI-driven</span></td>
+              <td><span class="lms-no">❌ Static</span></td>
+              <td><span class="lms-partial">⚠️ Semi-adaptive</span></td>
+            </tr>
+            <tr>
+              <td>Community Ecosystem</td>
+              <td><span class="lms-yes">✅ Built-in</span></td>
+              <td><span class="lms-no">❌ None</span></td>
+              <td><span class="lms-partial">⚠️ Limited</span></td>
+            </tr>
+            <tr>
+              <td>Industry Alignment</td>
+              <td><span class="lms-yes">✅ Strong</span></td>
+              <td><span class="lms-no">❌ Weak</span></td>
+              <td><span class="lms-partial">⚠️ Moderate</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="lms-discover reveal">
+        <h3>Discover a Smarter Way to Learn</h3>
+        <p>Powered by AI, the platform delivers hands-on video learning combined with real-world use cases supported by
+          features that make every session engaging and impactful.</p>
+        <a href="ai-trainings.html" class="btn-primary">Explore AI Trainings →</a>
+        <p class="lms-powered">Powered by SPARKY (SPRW)</p>
+      </div>
+    </section>
+
+    <!-- GLOBAL -->
+    <section id="global" aria-labelledby="global-title">
+      <div class="global-inner">
+        <div>
+          <div class="section-label">Global Presence</div>
+          <h2 class="section-title" id="global-title">A Growing<br>International Network</h2>
+          <p class="section-desc">Brighture operates through a growing international network, supporting institutions
+            and organizations across multiple regions — enabling collaboration with schools, universities, innovation
+            centers, and enterprises worldwide.</p>
+          <div class="locations-list" aria-label="Global locations">
+            <div class="location-item reveal">
+              <div class="loc-flag" aria-hidden="true">🇮🇳</div>
+              <div class="loc-info">
+                <h4>Bengaluru, India</h4>
+                <p>South Asia Innovation Hub</p>
+              </div>
+            </div>
+            <div class="location-item reveal reveal-delay-1">
+              <div class="loc-flag" aria-hidden="true">🇦🇪</div>
+              <div class="loc-info">
+                <h4>Dubai, United Arab Emirates</h4>
+                <p>Middle East &amp; Gulf Region</p>
+              </div>
+            </div>
+            <div class="location-item reveal reveal-delay-2">
+              <div class="loc-flag" aria-hidden="true">🇬🇧</div>
+              <div class="loc-info">
+                <h4>London, United Kingdom</h4>
+                <p>Europe &amp; UK Operations</p>
+              </div>
+            </div>
+            <div class="location-item reveal reveal-delay-3">
+              <div class="loc-flag" aria-hidden="true">🇺🇸</div>
+              <div class="loc-info">
+                <h4>Texas, United States of America</h4>
+                <p>Americas Innovation Center</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="global-message reveal">
+            <blockquote>"By combining infrastructure, learning, and innovation programs, Brighture helps create
+              ecosystems where human intelligence and artificial intelligence evolve together — preparing the next
+              generation for an AI-driven world."</blockquote>
+            <cite>— Global Impact Vision, Brighture</cite>
+          </div>
+          <div class="why-grid">
+            <div class="why-box reveal">
+              <div class="why-box-title blue">Why Brighture</div>
+              <ul class="why-list">
+                <li><span class="b">→</span>Future-ready infrastructure</li>
+                <li><span class="b">→</span>Hands-on AI &amp; robotics</li>
+                <li><span class="b">→</span>Industry-aligned programs</li>
+                <li><span class="b">→</span>Global ecosystem integration</li>
+              </ul>
+            </div>
+            <div class="why-box reveal reveal-delay-1">
+              <div class="why-box-title orange">Partners</div>
+              <ul class="why-list">
+                <li><span class="o">→</span>Schools &amp; Universities</li>
+                <li><span class="o">→</span>Government Ministries</li>
+                <li><span class="o">→</span>Research Institutions</li>
+                <li><span class="o">→</span>Corporate Innovation Labs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE CTA -->
+    <div class="page-cta" aria-label="Call to action">
+      <div class="page-cta-inner">
+        <div class="section-label" style="justify-content:center;color:rgba(255,255,255,0.6);">Get Started</div>
+        <h2>Ready to Build the Future of Innovation?</h2>
+        <p>Whether you are planning to establish an AI Innovation Lab, explore robotics and intelligent systems, or
+          deploy AI-powered industrial solutions — the Brighture team is ready to support your journey.</p>
+        <div class="page-cta-actions">
+          <a href="contact.html" class="cta-btn-white">Contact Us →</a>
+          <a href="ai-labs.html" class="cta-btn-ghost">Explore AI Labs</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo" aria-label="Brighture Home">brighture</a>
+        <p>Engineering Human Intelligence for the AI Future. Building AI Innovation Labs, robotics ecosystems, and
+          future skills infrastructure globally.</p>
+        <div style="margin-top:1.25rem;font-size:0.75rem;color:rgba(255,255,255,0.3);">innovate@brightureglobal.com
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="ai-labs.html">AI Labs</a></li>
+          <li><a href="ai-trainings.html">AI Trainings</a></li>
+          <li><a href="ai-products.html">AI Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="ai-labs.html#genesis">Genesis</a></li>
+          <li><a href="ai-labs.html#acceleration">Acceleration</a></li>
+          <li><a href="ai-labs.html#discovery">Discovery</a></li>
+          <li><a href="ai-labs.html#nexus">Nexus Campus</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="mailto:innovate@brightureglobal.com">Send an Email</a></li>
+          <li><a href="https://www.brightureglobal.com" target="_blank" rel="noopener">Website</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Brighture Global. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shared.js" defer></script>
+</body>
+
+</html>
