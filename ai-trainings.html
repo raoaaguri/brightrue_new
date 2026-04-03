@@ -221,9 +221,87 @@
       font-weight: 500;
     }
 
+    /* ── TRAINING SECTION IMAGE LAYOUT ── */
+    .training-section-layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .training-section-layout .training-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .training-section-layout .training-image {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .training-section-layout .training-image img {
+      max-width: 340px;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 10px 32px rgba(26, 86, 255, 0.10);
+      object-fit: cover;
+    }
+
+    /* ── METHODOLOGY IMAGE GALLERY ── */
+    .method-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .method-images img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+      opacity: 0.85;
+      transition: opacity 0.3s;
+    }
+
+    .method-images img:hover {
+      opacity: 1;
+    }
+
+    /* ── PARTNERS IMAGE ── */
+    .partners-visual {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
+    .partners-visual img {
+      max-width: 860px;
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 28px rgba(26, 86, 255, 0.10);
+    }
+
     @media (max-width: 960px) {
       .training-domains {
         grid-template-columns: repeat(3, 1fr);
+      }
+
+      .training-section-layout {
+        flex-direction: column;
+      }
+
+      .training-section-layout .training-image img {
+        max-width: 100%;
+      }
+
+      .method-images {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -456,9 +534,6 @@
     }
 
     .partner-logo-placeholder {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
       margin: 0 auto 1.25rem;
       display: flex;
       align-items: center;
@@ -466,19 +541,9 @@
       font-size: 1.8rem;
     }
 
-    .plp-blue {
-      background: var(--blue-xlight);
-      border: 2px solid var(--blue-light);
-    }
-
-    .plp-dark {
-      background: var(--ink);
-      border: 2px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .plp-purple {
-      background: var(--purple-xlight);
-      border: 2px solid var(--purple-light);
+    .plp-blue, .plp-dark, .plp-purple {
+      background: none;
+      border: none;
     }
 
     .partner-name {
@@ -544,7 +609,7 @@
   <main id="main-content">
 
     <!-- PAGE HERO -->
-    <div class="page-hero" aria-label="AI Trainings hero">
+    <div class="page-hero" aria-label="AI Trainings hero" style="gap:4rem;">
       <div class="page-hero-blob phb-1" aria-hidden="true"></div>
       <div class="page-hero-blob phb-2" aria-hidden="true"></div>
       <div class="page-hero-content">
@@ -557,6 +622,10 @@
           <a href="contact.html" class="btn-primary">Enroll Now →</a>
           <a href="#level1" class="btn-secondary">View Pathway</a>
         </div>
+      </div>
+      <div class="page-hero-image" style="flex:1;min-width:320px;display:flex;align-items:center;justify-content:center;">
+        <img src="images/Consolidated Images for AI Trainings1.webp" alt="AI Training Programs at Brighture"
+          style="max-width:440px;width:100%;height:auto;border-radius:18px;box-shadow:0 20px 60px rgba(26,86,255,0.13);">
       </div>
     </div>
 
@@ -583,13 +652,21 @@
     <!-- LEVEL 1 -->
     <div class="training-section" id="level1">
       <div class="training-inner">
-        <div class="training-header">
-          <div class="training-level-badge badge-l1" aria-label="Level 1">L1</div>
-          <div class="training-header-text">
-            <div class="training-label tl-1">🟦 Level 1 — Explorer</div>
-            <h2>Explorer — Foundation Stage</h2>
-            <p class="training-focus">Introduction to technology through creativity and basic logic building. Designed
-              for learners taking their very first steps into the world of AI, robotics, and intelligent systems.</p>
+        <div class="training-section-layout">
+          <div class="training-content">
+            <div class="training-header">
+              <div class="training-level-badge badge-l1" aria-label="Level 1">L1</div>
+              <div class="training-header-text">
+                <div class="training-label tl-1">🟦 Level 1 — Explorer</div>
+                <h2>Explorer — Foundation Stage</h2>
+                <p class="training-focus">Introduction to technology through creativity and basic logic building. Designed
+                  for learners taking their very first steps into the world of AI, robotics, and intelligent systems.</p>
+              </div>
+            </div>
+          </div>
+          <div class="training-image">
+            <img src="images/Consolidated Images for AI Trainings2.webp" alt="Explorer — Foundation Stage Training"
+              loading="lazy">
           </div>
         </div>
         <div class="training-domains">
@@ -649,13 +726,21 @@
     <!-- LEVEL 2 -->
     <div class="training-section" id="level2">
       <div class="training-inner">
-        <div class="training-header">
-          <div class="training-level-badge badge-l2" aria-label="Level 2">L2</div>
-          <div class="training-header-text">
-            <div class="training-label tl-2">🟩 Level 2 — Builder</div>
-            <h2>Builder — Intermediate Stage</h2>
-            <p class="training-focus">Applied learning with real systems and programming. Students move beyond the
-              basics and start working with real hardware, writing code, and building functional systems.</p>
+        <div class="training-section-layout">
+          <div class="training-content">
+            <div class="training-header">
+              <div class="training-level-badge badge-l2" aria-label="Level 2">L2</div>
+              <div class="training-header-text">
+                <div class="training-label tl-2">🟩 Level 2 — Builder</div>
+                <h2>Builder — Intermediate Stage</h2>
+                <p class="training-focus">Applied learning with real systems and programming. Students move beyond the
+                  basics and start working with real hardware, writing code, and building functional systems.</p>
+              </div>
+            </div>
+          </div>
+          <div class="training-image">
+            <img src="images/Consolidated Images for AI Trainings3.webp" alt="Builder — Intermediate Stage Training"
+              loading="lazy">
           </div>
         </div>
         <div class="training-domains">
@@ -718,14 +803,22 @@
     <!-- LEVEL 3 -->
     <div class="training-section" id="level3">
       <div class="training-inner">
-        <div class="training-header">
-          <div class="training-level-badge badge-l3" aria-label="Level 3">L3</div>
-          <div class="training-header-text">
-            <div class="training-label tl-3">🟨 Level 3 — Innovator</div>
-            <h2>Innovator — Advanced Stage</h2>
-            <p class="training-focus">Engineering systems and real-world applications. At this level, students design
-              and build complete intelligent systems — integrating AI, robotics, and cloud technologies to solve real
-              challenges.</p>
+        <div class="training-section-layout">
+          <div class="training-content">
+            <div class="training-header">
+              <div class="training-level-badge badge-l3" aria-label="Level 3">L3</div>
+              <div class="training-header-text">
+                <div class="training-label tl-3">🟨 Level 3 — Innovator</div>
+                <h2>Innovator — Advanced Stage</h2>
+                <p class="training-focus">Engineering systems and real-world applications. At this level, students design
+                  and build complete intelligent systems — integrating AI, robotics, and cloud technologies to solve real
+                  challenges.</p>
+              </div>
+            </div>
+          </div>
+          <div class="training-image">
+            <img src="images/Consolidated Images for AI Trainings4.webp" alt="Innovator — Advanced Stage Training"
+              loading="lazy">
           </div>
         </div>
         <div class="training-domains">
@@ -788,14 +881,22 @@
     <!-- LEVEL 4 -->
     <div class="training-section" id="level4">
       <div class="training-inner">
-        <div class="training-header">
-          <div class="training-level-badge badge-l4" aria-label="Level 4">L4</div>
-          <div class="training-header-text">
-            <div class="training-label tl-4">🟪 Level 4 — AI Specialist</div>
-            <h2>AI Specialist — Professional Level</h2>
-            <p class="training-focus">Advanced AI systems, product development, and research. This is the professional
-              tier — designed for learners ready to develop industry-grade AI products, multi-agent systems, and
-              cutting-edge research projects.</p>
+        <div class="training-section-layout">
+          <div class="training-content">
+            <div class="training-header">
+              <div class="training-level-badge badge-l4" aria-label="Level 4">L4</div>
+              <div class="training-header-text">
+                <div class="training-label tl-4">🟪 Level 4 — AI Specialist</div>
+                <h2>AI Specialist — Professional Level</h2>
+                <p class="training-focus">Advanced AI systems, product development, and research. This is the professional
+                  tier — designed for learners ready to develop industry-grade AI products, multi-agent systems, and
+                  cutting-edge research projects.</p>
+              </div>
+            </div>
+          </div>
+          <div class="training-image">
+            <img src="images/Consolidated Images for AI Trainings5.webp" alt="AI Specialist — Professional Level Training"
+              loading="lazy">
           </div>
         </div>
         <div class="training-domains">
@@ -908,6 +1009,10 @@
             <div class="hi-text">School curriculum-aligned yet designed to go far beyond the classroom.</div>
           </div>
         </div>
+        <div class="method-images reveal">
+          <img src="images/Consolidated Images for AI Trainings6.webp" alt="Hands-on AI Training in Action" loading="lazy">
+          <img src="images/Consolidated Images for AI Trainings7.webp" alt="Students Building Real AI Systems" loading="lazy">
+        </div>
       </div>
     </section>
 
@@ -919,6 +1024,9 @@
         <p class="section-desc" style="margin:0 auto;text-align:center;">Brighture collaborates with leading global
           technology ecosystems and follows internationally recognized standards in AI, robotics, and innovation
           education.</p>
+      </div>
+      <div class="partners-visual reveal">
+        <img src="images/Accreditation & Partnerships .webp" alt="Accreditation and Partnerships" loading="lazy" style="max-width:250px;">
       </div>
       <div class="accreditation-bar reveal">
         <h3>Global Recognition &amp; Standards</h3>
@@ -932,21 +1040,27 @@
       </div>
       <div class="partners-grid">
         <div class="partner-card reveal">
-          <div class="partner-logo-placeholder plp-dark">🎮</div>
+          <div class="partner-logo-placeholder plp-dark">
+            <img src="images/Technology & Ecosystem Partners1.webp" alt="Unity" loading="lazy" style="max-width:120px;height:auto;">
+          </div>
           <div class="partner-name">Unity</div>
           <div class="partner-role">3D, VR/AR Platform — Simulation and Digital Twin Environments</div>
           <p class="partner-desc">Unity powers our immersive VR/AR curriculum, simulation environments, and digital twin
             experiences across Level 3 and Level 4 programs.</p>
         </div>
         <div class="partner-card reveal reveal-delay-1">
-          <div class="partner-logo-placeholder plp-blue">🚁</div>
+          <div class="partner-logo-placeholder plp-blue">
+            <img src="images/Technology & Ecosystem Partners2.webp" alt="DJI" loading="lazy" style="max-width:120px;height:auto;">
+          </div>
           <div class="partner-name">DJI</div>
           <div class="partner-role">Drone Technology Leader</div>
           <p class="partner-desc">DJI's drone platforms are integrated across our Drone domain training — from basic
             flight concepts at Level 1 to autonomous navigation systems at Level 4.</p>
         </div>
         <div class="partner-card reveal reveal-delay-2">
-          <div class="partner-logo-placeholder plp-purple">⚡</div>
+          <div class="partner-logo-placeholder plp-purple">
+            <img src="images/Technology & Ecosystem Partners3.webp" alt="SP Robotics Works" loading="lazy" style="max-width:120px;height:auto;">
+          </div>
           <div class="partner-name">SP Robotics Works</div>
           <div class="partner-role">SPARKY — AI Learning Platform</div>
           <p class="partner-desc">SP Robotics Works powers the Brighture LMS through the SPARKY AI learning platform —
