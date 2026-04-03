@@ -15,6 +15,7 @@
     content="Four structured programs from foundational AI exploration to full institutional innovation campuses.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#1a56ff">
+  <link rel="icon" type="image/svg+xml" href="images/favIcon.svg">
   <link rel="canonical" href="https://www.brightureglobal.com/ai-labs.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +39,6 @@
     }
 
     .lab-detail-inner {
-      max-width: 1100px;
       margin: 0 auto;
     }
 
@@ -130,7 +130,7 @@
 
     .lab-specs-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
     }
 
@@ -207,8 +207,86 @@
 
     /* ── COMPARISON ── */
     #comparison {
-      padding: 100px 5%;
+      padding: 80px 5%;
       background: var(--bg-alt);
+    }
+
+    /* ── TARGET AUDIENCE SECTION ── */
+    #target-audience {
+      padding: 80px 5%;
+      background: white;
+      border-top: 1px solid var(--border);
+    }
+
+    .audience-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .audience-header .section-label {
+      justify-content: center;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .audience-card {
+      border-radius: var(--radius);
+      padding: 2rem 1.75rem;
+      border: 1px solid var(--border);
+      background: var(--bg-alt);
+      transition: all 0.3s;
+    }
+
+    .audience-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      background: white;
+    }
+
+    .audience-accent {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .audience-program {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+
+    .audience-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .audience-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    @media (max-width: 960px) {
+      .audience-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .comparison-intro {
@@ -279,12 +357,18 @@
       }
 
       .lab-specs-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .impact-inner {
         grid-template-columns: 1fr;
         gap: 3rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .lab-specs-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -297,7 +381,7 @@
 
   <!-- NAV -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="nav-logo">brighture</a>
+    <a href="index.html" class="nav-logo">brigh<span class="logo-t">t</span>ure</a>
     <ul class="nav-links">
       <li><a href="index.html">About Us</a></li>
       <li><a href="ai-labs.html" class="active" aria-current="page">AI Labs</a></li>
@@ -362,6 +446,125 @@
       </div>
     </div>
 
+    <!-- INNOVATION PROGRAMS -->
+    <section id="packages" aria-labelledby="packages-title">
+      <div class="packages-header reveal">
+        <div class="section-label">Innovation Programs</div>
+        <h2 class="section-title" id="packages-title">Choose Your<br>Innovation Path</h2>
+        <p class="section-desc" style="margin:0 auto;text-align:center;">Four structured programs — from foundational AI
+          exploration to full institutional innovation campuses. Each designed to grow with your institution's ambition.
+        </p>
+      </div>
+      <div class="program-cards">
+        <div class="prog-card pc-genesis reveal">
+          <div class="prog-accent" aria-hidden="true">🟦</div>
+          <div class="prog-name">Genesis</div>
+          <div class="prog-subtitle">For Early AI &amp; Robotics Learning</div>
+          <ul class="prog-features">
+            <li>Core Innovation Labs</li>
+            <li>Foundational AI &amp; Robotics</li>
+            <li>Hands-on Electronics &amp; IoT</li>
+            <li>Design Thinking Approach</li>
+          </ul>
+          <div class="prog-tag">Ideal for Schools &amp; Early University</div>
+          <a href="#genesis" class="prog-learn-more">Learn More →</a>
+        </div>
+        <div class="prog-card pc-accel reveal reveal-delay-1">
+          <div class="prog-accent" aria-hidden="true">🟩</div>
+          <div class="prog-name">Acceleration</div>
+          <div class="prog-subtitle">For Applied Engineering &amp; Prototyping</div>
+          <ul class="prog-features">
+            <li>Multi-domain Innovation Labs</li>
+            <li>AI, CV &amp; Edge Computing</li>
+            <li>Real-world Product Development</li>
+            <li>Simulation-based Learning</li>
+          </ul>
+          <div class="prog-tag">Ideal for Schools, Universities &amp; Skill Programs</div>
+          <a href="#acceleration" class="prog-learn-more">Learn More →</a>
+        </div>
+        <div class="prog-card pc-discovery reveal reveal-delay-2">
+          <div class="prog-accent" aria-hidden="true">🟨</div>
+          <div class="prog-name">Discovery</div>
+          <div class="prog-subtitle">For Advanced Research &amp; Innovation</div>
+          <ul class="prog-features">
+            <li>Full-stack AI &amp; Robotics Labs</li>
+            <li>Autonomous Systems &amp; Drones</li>
+            <li>GPU-powered AI Infrastructure</li>
+            <li>Digital Twin &amp; Simulation</li>
+          </ul>
+          <div class="prog-tag">Ideal for Universities &amp; Research Centers</div>
+          <a href="#discovery" class="prog-learn-more">Learn More →</a>
+        </div>
+        <div class="prog-card pc-nexus reveal reveal-delay-3">
+          <div class="prog-accent" aria-hidden="true">🟪</div>
+          <div class="prog-name">Nexus Campus</div>
+          <div class="prog-subtitle">For Institutional AI Ecosystem</div>
+          <ul class="prog-features">
+            <li>End-to-End Innovation Campus</li>
+            <li>Industrial &amp; Physical AI Platforms</li>
+            <li>Smart Manufacturing Labs</li>
+            <li>Cloud + AI Compute Infrastructure</li>
+          </ul>
+          <div class="prog-tag">Ideal for Universities, Enterprises &amp; Governments</div>
+          <a href="#nexus" class="prog-learn-more">Learn More →</a>
+        </div>
+      </div>
+      <div class="every-pkg reveal">
+        <h4>Every Program Includes</h4>
+        <div class="every-grid">
+          <div class="every-item">
+            <div class="every-check" aria-hidden="true">✓</div>
+            <div class="every-text">Innovation Lab Design &amp; Planning</div>
+          </div>
+          <div class="every-item">
+            <div class="every-check" aria-hidden="true">✓</div>
+            <div class="every-text">Technology Infrastructure Deployment</div>
+          </div>
+          <div class="every-item">
+            <div class="every-check" aria-hidden="true">✓</div>
+            <div class="every-text">Hardware and Software Platforms</div>
+          </div>
+          <div class="every-item">
+            <div class="every-check" aria-hidden="true">✓</div>
+            <div class="every-text">Educator Training &amp; Enablement</div>
+          </div>
+          <div class="every-item">
+            <div class="every-check" aria-hidden="true">✓</div>
+            <div class="every-text">Project-Based Learning Frameworks</div>
+          </div>
+          <div class="every-item">
+            <div class="every-check" aria-hidden="true">✓</div>
+            <div class="every-text">Innovation Challenges &amp; Hackathons</div>
+          </div>
+        </div>
+      </div>
+      <div class="why-brigh<span class="logo-t">t</span>ure reveal">
+        <h4>Why Institutions Choose Brighture</h4>
+        <div class="why-brigh<span class="logo-t">t</span>ure-grid">
+          <div class="why-brigh<span class="logo-t">t</span>ure-item">
+            <div class="why-brigh<span class="logo-t">t</span>ure-icon">🏗️</div>
+            <p>Future-ready technology infrastructure</p>
+          </div>
+          <div class="why-brigh<span class="logo-t">t</span>ure-item">
+            <div class="why-brigh<span class="logo-t">t</span>ure-icon">🤖</div>
+            <p>Hands-on AI and robotics experimentation</p>
+          </div>
+          <div class="why-brigh<span class="logo-t">t</span>ure-item">
+            <div class="why-brigh<span class="logo-t">t</span>ure-icon">🔬</div>
+            <p>Research and innovation capability development</p>
+          </div>
+          <div class="why-brigh<span class="logo-t">t</span>ure-item">
+            <div class="why-brigh<span class="logo-t">t</span>ure-icon">🎯</div>
+            <p>Industry-aligned technology programs</p>
+          </div>
+          <div class="why-brigh<span class="logo-t">t</span>ure-item">
+            <div class="why-brigh<span class="logo-t">t</span>ure-icon">🌍</div>
+            <p>Global innovation ecosystem integration</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- GENESIS -->
     <div class="lab-detail-section" id="genesis">
       <div class="lab-detail-inner">
@@ -379,17 +582,6 @@
               <div class="lab-ideal">Ideal for Schools &amp; Early University Programs</div>
               <div class="lab-focus-tag">Lab Focus: Technology exploration and foundational innovation skills.</div>
             </div>
-            <div class="reveal reveal-delay-1">
-              <div class="spec-block" style="height:100%;">
-                <h4>Included Innovation Labs</h4>
-                <ul class="spec-list">
-                  <li>AI Innovation Lab</li>
-                  <li>Robotics Innovation Lab</li>
-                  <li>Embedded Systems Innovation Lab</li>
-                  <li>Innovation Studio</li>
-                </ul>
-              </div>
-            </div>
           </div>
           <div class="img-col">
             <img src="images/Genesis.webp" alt="Genesis Program"
@@ -398,6 +590,15 @@
         </div>
         <div class="lab-specs-grid">
           <div class="spec-block reveal">
+            <h4>Included Innovation Labs</h4>
+            <ul class="spec-list">
+              <li>AI Innovation Lab</li>
+              <li>Robotics Innovation Lab</li>
+              <li>Embedded Systems Innovation Lab</li>
+              <li>Innovation Studio</li>
+            </ul>
+          </div>
+          <div class="spec-block reveal reveal-delay-1">
             <h4>Technology Platforms</h4>
             <ul class="spec-list">
               <li>Educational robotics platforms</li>
@@ -425,16 +626,6 @@
               <li>Learning program framework</li>
             </ul>
           </div>
-          <div class="spec-block spec-block-dark reveal reveal-delay-3">
-            <h4>Why Genesis?</h4>
-            <ul class="spec-list">
-              <li>No prior experience required</li>
-              <li>Age-appropriate, progressive curriculum</li>
-              <li>Hands-on from day one</li>
-              <li>Scalable as your program grows</li>
-              <li>Full Brighture support included</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -457,19 +648,6 @@
               <div class="lab-focus-tag">Lab Focus: Development of intelligent systems and real-world applications.
               </div>
             </div>
-            <div class="reveal reveal-delay-1">
-              <div class="spec-block" style="height:100%;">
-                <h4>Included Innovation Labs</h4>
-                <ul class="spec-list">
-                  <li>AI Innovation Lab</li>
-                  <li>Robotics Innovation Lab</li>
-                  <li>Computer Vision Innovation Lab</li>
-                  <li>Embedded Systems Innovation Lab</li>
-                  <li>Autonomous Systems Lab</li>
-                  <li>Innovation Studio</li>
-                </ul>
-              </div>
-            </div>
           </div>
           <div class="img-col">
             <img src="images/Acceleration.webp" alt="Acceleration Program"
@@ -478,6 +656,17 @@
         </div>
         <div class="lab-specs-grid">
           <div class="spec-block reveal">
+            <h4>Included Innovation Labs</h4>
+            <ul class="spec-list">
+              <li>AI Innovation Lab</li>
+              <li>Robotics Innovation Lab</li>
+              <li>Computer Vision Innovation Lab</li>
+              <li>Embedded Systems Innovation Lab</li>
+              <li>Autonomous Systems Lab</li>
+              <li>Innovation Studio</li>
+            </ul>
+          </div>
+          <div class="spec-block reveal reveal-delay-1">
             <h4>Technology Platforms</h4>
             <ul class="spec-list">
               <li>Advanced robotics platforms</li>
@@ -507,16 +696,6 @@
               <li>Student innovation challenges</li>
             </ul>
           </div>
-          <div class="spec-block spec-block-dark reveal reveal-delay-3">
-            <h4>Why Acceleration?</h4>
-            <ul class="spec-list">
-              <li>Multi-domain real-world projects</li>
-              <li>Industry-standard tools and platforms</li>
-              <li>Simulation-based safe learning</li>
-              <li>Bridges learning and deployment</li>
-              <li>Student innovation showcases</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -538,21 +717,6 @@
               <div class="lab-ideal">Ideal for Universities &amp; Research Centers</div>
               <div class="lab-focus-tag">Lab Focus: Advanced research, experimentation, and product innovation.</div>
             </div>
-            <div class="reveal reveal-delay-1">
-              <div class="spec-block" style="height:100%;">
-                <h4>Included Innovation Labs</h4>
-                <ul class="spec-list">
-                  <li>AI Innovation Lab</li>
-                  <li>Physical AI Innovation Lab</li>
-                  <li>Robotics Engineering Lab</li>
-                  <li>Computer Vision Lab</li>
-                  <li>Autonomous Systems Lab</li>
-                  <li>Embedded Systems Lab</li>
-                  <li>Innovation Studio</li>
-                  <li>AI Research Center</li>
-                </ul>
-              </div>
-            </div>
           </div>
           <div class="img-col">
             <img src="images/Discovery Lab Focus.webp" alt="Discovery Program"
@@ -561,6 +725,19 @@
         </div>
         <div class="lab-specs-grid">
           <div class="spec-block reveal">
+            <h4>Included Innovation Labs</h4>
+            <ul class="spec-list">
+              <li>AI Innovation Lab</li>
+              <li>Physical AI Innovation Lab</li>
+              <li>Robotics Engineering Lab</li>
+              <li>Computer Vision Lab</li>
+              <li>Autonomous Systems Lab</li>
+              <li>Embedded Systems Lab</li>
+              <li>Innovation Studio</li>
+              <li>AI Research Center</li>
+            </ul>
+          </div>
+          <div class="spec-block reveal reveal-delay-1">
             <h4>Technology Platforms</h4>
             <ul class="spec-list">
               <li>Advanced robotics platforms</li>
@@ -590,16 +767,6 @@
               <li>Student startup incubation initiatives</li>
             </ul>
           </div>
-          <div class="spec-block spec-block-dark reveal reveal-delay-3">
-            <h4>Why Discovery?</h4>
-            <ul class="spec-list">
-              <li>GPU-powered AI research infrastructure</li>
-              <li>Real autonomous drone platforms</li>
-              <li>Digital twin simulation environments</li>
-              <li>Dedicated AI Research Center</li>
-              <li>Startup incubation pathways</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -623,21 +790,6 @@
               <div class="lab-focus-tag">Lab Focus: Integrates multiple labs and innovation spaces to create a full
                 technology ecosystem.</div>
             </div>
-            <div class="reveal reveal-delay-1">
-              <div class="spec-block" style="height:100%;">
-                <h4>Included Innovation Labs</h4>
-                <ul class="spec-list">
-                  <li>AI Innovation Lab</li>
-                  <li>Robotics Engineering Lab</li>
-                  <li>Autonomous Systems Lab</li>
-                  <li>Computer Vision Lab</li>
-                  <li>Embedded Systems Lab</li>
-                  <li>Smart Manufacturing Lab</li>
-                  <li>Innovation Studio</li>
-                  <li>AI Research Center</li>
-                </ul>
-              </div>
-            </div>
           </div>
           <div class="img-col">
             <img src="images/Nexus Campus.webp" alt="Nexus Campus Program"
@@ -646,6 +798,19 @@
         </div>
         <div class="lab-specs-grid">
           <div class="spec-block reveal">
+            <h4>Included Innovation Labs</h4>
+            <ul class="spec-list">
+              <li>AI Innovation Lab</li>
+              <li>Robotics Engineering Lab</li>
+              <li>Autonomous Systems Lab</li>
+              <li>Computer Vision Lab</li>
+              <li>Embedded Systems Lab</li>
+              <li>Smart Manufacturing Lab</li>
+              <li>Innovation Studio</li>
+              <li>AI Research Center</li>
+            </ul>
+          </div>
+          <div class="spec-block reveal reveal-delay-1">
             <h4>Technology Platforms</h4>
             <ul class="spec-list">
               <li>Artificial Intelligence Platform</li>
@@ -679,16 +844,6 @@
               <li>Student startup incubation initiatives</li>
             </ul>
           </div>
-          <div class="spec-block spec-block-dark reveal reveal-delay-3">
-            <h4>Why Nexus Campus?</h4>
-            <ul class="spec-list">
-              <li>Complete institutional transformation</li>
-              <li>Smart Manufacturing Lab integration</li>
-              <li>Cloud + AI compute infrastructure</li>
-              <li>Fellowship and research programs</li>
-              <li>Government and enterprise aligned</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -709,8 +864,6 @@
           Platforms</button>
         <button class="tab-btn" data-tab="learning" onclick="showTab('learning')" role="tab"
           aria-selected="false">Learning Depth</button>
-        <button class="tab-btn" data-tab="audience" onclick="showTab('audience')" role="tab"
-          aria-selected="false">Target Audience</button>
       </div>
 
       <!-- Labs Tab -->
@@ -719,69 +872,69 @@
           <table class="comp-table" aria-label="Innovation labs comparison">
             <thead>
               <tr>
-                <th scope="col">Innovation Labs</th>
-                <th scope="col" class="th-genesis">Genesis</th>
-                <th scope="col" class="th-accel">Acceleration</th>
-                <th scope="col" class="th-discovery">Discovery</th>
-                <th scope="col" class="th-nexus">Nexus Campus</th>
+                <th scope="col">Innovation Lab</th>
+                <th scope="col" class="th-genesis">🟦 Genesis</th>
+                <th scope="col" class="th-accel">🟩 Acceleration</th>
+                <th scope="col" class="th-discovery">🟨 Discovery</th>
+                <th scope="col" class="th-nexus">🟪 Nexus Campus</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>AI Innovation Lab</td>
-                <td><span class="check-yes" aria-label="Included">✓</span></td>
+                <td style="font-weight:600;text-align:left;">AI Innovation Lab</td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Robotics Lab</td>
+                <td style="font-weight:600;text-align:left;">Robotics Lab</td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Embedded Systems Lab</td>
+                <td style="font-weight:600;text-align:left;">Embedded Systems Lab</td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Innovation Studio</td>
+                <td style="font-weight:600;text-align:left;">Innovation Studio</td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Computer Vision Lab</td>
-                <td><span class="check-no" aria-label="Not included">—</span></td>
+                <td style="font-weight:600;text-align:left;">Computer Vision Lab</td>
+                <td><span class="check-no">NA</span></td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Autonomous Systems Lab</td>
-                <td><span class="check-no">—</span></td>
+                <td style="font-weight:600;text-align:left;">Autonomous Systems Lab</td>
+                <td><span class="check-no">NA</span></td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>AI Research Center</td>
-                <td><span class="check-no">—</span></td>
-                <td><span class="check-no">—</span></td>
+                <td style="font-weight:600;text-align:left;">AI Research Center</td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Smart Manufacturing Lab</td>
-                <td><span class="check-no">—</span></td>
-                <td><span class="check-no">—</span></td>
-                <td><span class="check-no">—</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td style="font-weight:600;text-align:left;">Smart Manufacturing Lab</td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
             </tbody>
           </table>
@@ -794,62 +947,62 @@
           <table class="comp-table" aria-label="Technology platforms comparison">
             <thead>
               <tr>
-                <th scope="col">Technology Platforms</th>
-                <th scope="col" class="th-genesis">Genesis</th>
-                <th scope="col" class="th-accel">Acceleration</th>
-                <th scope="col" class="th-discovery">Discovery</th>
-                <th scope="col" class="th-nexus">Nexus Campus</th>
+                <th scope="col">Technology Platform</th>
+                <th scope="col" class="th-genesis">🟦 Genesis</th>
+                <th scope="col" class="th-accel">🟩 Acceleration</th>
+                <th scope="col" class="th-discovery">🟨 Discovery</th>
+                <th scope="col" class="th-nexus">🟪 Nexus Campus</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Educational Robotics</td>
+                <td style="font-weight:600;text-align:left;">Educational Robotics</td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td><span class="check-no">—</span></td>
-                <td class="th-nexus-cell"><span class="check-no">—</span></td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
               </tr>
               <tr>
-                <td>AI Workstations</td>
-                <td><span class="check-no">—</span></td>
+                <td style="font-weight:600;text-align:left;">AI Workstations</td>
+                <td><span class="check-no">NA</span></td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Edge AI Devices</td>
-                <td><span class="check-no">—</span></td>
+                <td style="font-weight:600;text-align:left;">Edge AI Devices</td>
+                <td><span class="check-no">NA</span></td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Digital Twin</td>
-                <td><span class="check-no">—</span></td>
+                <td style="font-weight:600;text-align:left;">Digital Twin</td>
+                <td><span class="check-no">NA</span></td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Autonomous Robots</td>
-                <td><span class="check-no">—</span></td>
-                <td><span class="check-no">—</span></td>
+                <td style="font-weight:600;text-align:left;">Autonomous Robots</td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Drone Platforms</td>
-                <td><span class="check-no">—</span></td>
-                <td><span class="check-no">—</span></td>
+                <td style="font-weight:600;text-align:left;">Drone Platforms</td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>AI Cloud Infrastructure</td>
-                <td><span class="check-no">—</span></td>
-                <td><span class="check-no">—</span></td>
-                <td><span class="check-no">—</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td style="font-weight:600;text-align:left;">AI Cloud Infrastructure</td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
             </tbody>
           </table>
@@ -862,134 +1015,113 @@
           <table class="comp-table" aria-label="Learning depth comparison">
             <thead>
               <tr>
-                <th scope="col">Learning Depth</th>
-                <th scope="col" class="th-genesis">Genesis</th>
-                <th scope="col" class="th-accel">Acceleration</th>
-                <th scope="col" class="th-discovery">Discovery</th>
-                <th scope="col" class="th-nexus">Nexus Campus</th>
+                <th scope="col">Learning Area</th>
+                <th scope="col" class="th-genesis">🟦 Genesis</th>
+                <th scope="col" class="th-accel">🟩 Acceleration</th>
+                <th scope="col" class="th-discovery">🟨 Discovery</th>
+                <th scope="col" class="th-nexus">🟪 Nexus Campus</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>AI Fundamentals</td>
+                <td style="font-weight:600;text-align:left;">AI Fundamentals</td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Machine Learning</td>
-                <td><span class="check-no">—</span></td>
+                <td style="font-weight:600;text-align:left;">Machine Learning</td>
+                <td><span class="check-no">NA</span></td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Computer Vision</td>
-                <td><span class="check-no">—</span></td>
+                <td style="font-weight:600;text-align:left;">Computer Vision</td>
+                <td><span class="check-no">NA</span></td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Autonomous Systems</td>
-                <td><span class="check-no">—</span></td>
+                <td style="font-weight:600;text-align:left;">Autonomous Systems</td>
+                <td><span class="check-no">NA</span></td>
                 <td><span class="check-yes">✓</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
-              </tr>
-              <tr>
-                <td>Reinforcement Learning</td>
-                <td><span class="check-no">—</span></td>
-                <td><span class="check-no">—</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Research &amp; Fellowships</td>
-                <td><span class="check-no">—</span></td>
-                <td><span class="check-no">—</span></td>
+                <td style="font-weight:600;text-align:left;">Reinforcement Learning</td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
                 <td><span class="check-yes">✓</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>Industrial AI</td>
-                <td><span class="check-no">—</span></td>
-                <td><span class="check-no">—</span></td>
-                <td><span class="check-no">—</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td style="font-weight:600;text-align:left;">Research &amp; Fellowships</td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-yes">✓</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
               <tr>
-                <td>AI Entrepreneurship</td>
-                <td><span class="check-no">—</span></td>
-                <td><span class="check-no">—</span></td>
-                <td><span class="check-no">—</span></td>
-                <td class="th-nexus-cell"><span class="check-yes">✓</span></td>
+                <td style="font-weight:600;text-align:left;">Industrial AI</td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-yes">✓</span></td>
+              </tr>
+              <tr>
+                <td style="font-weight:600;text-align:left;">AI Entrepreneurship</td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-no">NA</span></td>
+                <td><span class="check-yes">✓</span></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      <!-- Audience Tab -->
-      <div class="comp-pane" id="tab-audience" role="tabpanel">
-        <div class="table-scroll">
-          <table class="comp-table" aria-label="Target audience comparison">
-            <thead>
-              <tr>
-                <th scope="col">Program</th>
-                <th scope="col">Target Audience</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="color:var(--blue);font-weight:700;">🟦 Genesis</td>
-                <td style="text-align:left;">Schools, Early-stage Universities</td>
-              </tr>
-              <tr>
-                <td style="color:var(--green);font-weight:700;">🟩 Acceleration</td>
-                <td style="text-align:left;">Schools, Universities, Skill Programs</td>
-              </tr>
-              <tr>
-                <td style="color:var(--amber);font-weight:700;">🟨 Discovery</td>
-                <td style="text-align:left;">Universities, Innovation &amp; Research Centers</td>
-              </tr>
-              <tr>
-                <td style="color:var(--purple);font-weight:700;">🟪 Nexus Campus</td>
-                <td style="text-align:left;">Universities, Enterprises, Government Entities</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+    </section>
 
-      <div class="every-pkg reveal" style="margin-top:3rem;">
-        <h4>Every Program Includes</h4>
-        <div class="every-grid">
-          <div class="every-item">
-            <div class="every-check" aria-hidden="true">✓</div>
-            <div class="every-text">Innovation Lab Design &amp; Planning</div>
-          </div>
-          <div class="every-item">
-            <div class="every-check" aria-hidden="true">✓</div>
-            <div class="every-text">Technology Infrastructure Deployment</div>
-          </div>
-          <div class="every-item">
-            <div class="every-check" aria-hidden="true">✓</div>
-            <div class="every-text">Hardware and Software Platforms</div>
-          </div>
-          <div class="every-item">
-            <div class="every-check" aria-hidden="true">✓</div>
-            <div class="every-text">Educator Training &amp; Enablement</div>
-          </div>
-          <div class="every-item">
-            <div class="every-check" aria-hidden="true">✓</div>
-            <div class="every-text">Project-Based Learning Frameworks</div>
-          </div>
-          <div class="every-item">
-            <div class="every-check" aria-hidden="true">✓</div>
-            <div class="every-text">Innovation Challenges &amp; Hackathons</div>
-          </div>
+    <!-- TARGET AUDIENCE -->
+    <section id="target-audience" aria-labelledby="audience-title">
+      <div class="audience-header reveal">
+        <div class="section-label">Who It's For</div>
+        <h2 id="audience-title">Target Audience</h2>
+        <p class="section-desc" style="margin:0 auto;text-align:center;">Each program is designed for a specific
+          institution type and level of innovation maturity.</p>
+      </div>
+      <div class="audience-grid">
+        <div class="audience-card reveal">
+          <div class="audience-accent">🟦</div>
+          <div class="audience-program">Genesis</div>
+          <div class="audience-label" style="color:var(--blue);">Foundation Level</div>
+          <p class="audience-desc">Schools and early-stage universities taking their first steps into AI, robotics, and
+            technology innovation.</p>
+        </div>
+        <div class="audience-card reveal reveal-delay-1">
+          <div class="audience-accent">🟩</div>
+          <div class="audience-program">Acceleration</div>
+          <div class="audience-label" style="color:var(--green);">Intermediate Level</div>
+          <p class="audience-desc">Schools, universities, and skill development programs ready to build real-world AI
+            and robotics systems.</p>
+        </div>
+        <div class="audience-card reveal reveal-delay-2">
+          <div class="audience-accent">🟨</div>
+          <div class="audience-program">Discovery</div>
+          <div class="audience-label" style="color:var(--amber);">Advanced Level</div>
+          <p class="audience-desc">Universities, innovation centers, and research institutions pursuing cutting-edge AI
+            development and autonomous systems.</p>
+        </div>
+        <div class="audience-card reveal reveal-delay-3">
+          <div class="audience-accent">🟪</div>
+          <div class="audience-program">Nexus Campus</div>
+          <div class="audience-label" style="color:var(--purple);">Enterprise Level</div>
+          <p class="audience-desc">Universities, enterprises, and government entities building full-scale institutional
+            AI innovation ecosystems.</p>
         </div>
       </div>
     </section>
@@ -1014,7 +1146,7 @@
   <footer role="contentinfo">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="footer-brand-logo">brighture</a>
+        <a href="index.html" class="footer-brand-logo">brigh<span class="logo-t">t</span>ure</a>
         <p>Engineering Human Intelligence for the AI Future. Building AI Innovation Labs, robotics ecosystems, and
           future skills infrastructure globally.</p>
         <div style="margin-top:1.25rem;font-size:0.75rem;color:rgba(255,255,255,0.3);">innovate@brightureglobal.com
