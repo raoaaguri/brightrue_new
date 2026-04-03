@@ -397,6 +397,194 @@
       }
     }
 
+    /* ── MISSION & VISION ── */
+    .mission-vision-section {
+      background: var(--ink);
+      padding: 80px 5%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mission-vision-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+
+    .mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mv-card {
+      border-radius: var(--radius);
+      padding: 3rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mv-mission {
+      background: linear-gradient(135deg, var(--blue), #2563eb);
+    }
+
+    .mv-vision {
+      background: linear-gradient(135deg, var(--purple), #5b21b6);
+    }
+
+    .mv-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 1.5rem;
+    }
+
+    .mv-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .mv-card p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      .mv-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── VALUES ── */
+    .values-section {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      padding: 80px 5%;
+    }
+
+    .values-section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .values-section-header .section-label {
+      justify-content: center;
+    }
+
+    .values-5-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .value-5-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .value-5-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--blue-mid);
+    }
+
+    .value-5-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .value-5-card h3 {
+      font-size: 0.9rem;
+      color: var(--blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .value-5-card p {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 960px) {
+      .values-5-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .values-5-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ── SUSTAINABILITY ── */
+    .sustain-section {
+      background: white;
+      border-top: 1px solid var(--border);
+      padding: 80px 5%;
+      text-align: center;
+    }
+
+    .sustain-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .sustain-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .sustain-section p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-top: 1rem;
+    }
+
+    /* ── NEED FOR INNOVATION INFRASTRUCTURE ── */
+    .infra-section {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 5%;
+    }
+
+    .infra-inner {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .infra-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .infra-text p + p {
+      margin-top: 1rem;
+    }
+
     /* ── FRAMEWORK ── */
     #framework {
       background: white;
@@ -1013,7 +1201,7 @@
         </div>
       </div>
       <div class="hero-visual">
-        <img src="images/Brighture Global Innovation Lab Framework.webp" alt="Brighture Global Innovation Lab Framework"
+        <img src="images/The Brighture Innovation Lab Ecosystem.webp" alt="The Brighture Innovation Lab Ecosystem"
           class="hero-image">
       </div>
     </section>
@@ -1064,65 +1252,133 @@
       <div>
         <div class="section-label">About Brighture</div>
         <h2 class="section-title" id="about-title">Engineering Innovation<br>Ecosystems, Globally</h2>
-        <p class="section-desc">Brighture is a global innovation platform focused on building AI Innovation Labs,
-          robotics ecosystems, and future skills infrastructure for institutions and enterprises.</p>
-        <p class="section-desc" style="margin-top:1rem;">Through the Brighture Global Innovation Lab Framework, we
-          enable schools, universities, research centers, and organizations to create hands-on environments where
-          artificial intelligence, robotics, and emerging technologies are explored through experimentation and
-          real-world problem solving.</p>
-        <div class="values-grid" aria-label="Core values">
-          <div class="value-item reveal">
-            <div class="value-name">Innovation</div>
-            <div class="value-desc">Encouraging creativity and experimentation at every level.</div>
-          </div>
-          <div class="value-item reveal reveal-delay-1">
-            <div class="value-name">Human Intelligence</div>
-            <div class="value-desc">Empowering people through transformative technology.</div>
-          </div>
-          <div class="value-item reveal reveal-delay-2">
-            <div class="value-name">Engineering Excellence</div>
-            <div class="value-desc">Building world-class technology platforms and infrastructure.</div>
-          </div>
-          <div class="value-item reveal">
-            <div class="value-name">Collaboration</div>
-            <div class="value-desc">Connecting educators, engineers, and innovators globally.</div>
-          </div>
-          <div class="value-item reveal reveal-delay-1">
-            <div class="value-name">Integrity</div>
-            <div class="value-desc">Advancing responsible and ethical innovation.</div>
-          </div>
-          <div class="value-item reveal reveal-delay-2">
-            <div class="value-name">Sustainability</div>
-            <div class="value-desc">Enabling technologies that improve efficiency and safety responsibly.</div>
-          </div>
+        <p class="section-desc">Brighture is a global innovation platform focused on building <strong>AI Innovation
+            Labs, robotics ecosystems, and future skills infrastructure</strong> for institutions and enterprises.</p>
+        <p class="section-desc" style="margin-top:1rem;">Through the <strong>Brighture Global Innovation Lab
+            Framework</strong>, we enable schools, universities, research centers, and organizations to create
+          hands-on environments where artificial intelligence, robotics, and emerging technologies are explored through
+          experimentation and real-world problem solving.</p>
+        <p class="section-desc" style="margin-top:1rem;">Brighture combines <strong>technology infrastructure,
+            experiential learning, and innovation programs</strong> to help develop the next generation of engineers,
+          innovators, and technology leaders.</p>
+      </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="mission-vision-section" aria-label="Mission and Vision">
+      <div class="mv-grid">
+        <div class="mv-card mv-mission reveal">
+          <div class="mv-icon">🎯</div>
+          <div class="mv-label">Mission</div>
+          <p>To engineer innovation ecosystems that empower institutions and enterprises to develop technologies and
+            talent for the AI-driven future.</p>
         </div>
-        <div class="mission-box reveal">
-          <div class="mission-label">Our Mission</div>
-          <p class="mission-text">To engineer innovation ecosystems that empower institutions and enterprises to develop
-            technologies and talent for the AI-driven future.</p>
+        <div class="mv-card mv-vision reveal reveal-delay-1">
+          <div class="mv-icon">🔭</div>
+          <div class="mv-label">Vision</div>
+          <p>To advance human intelligence and innovation in the age of artificial intelligence.</p>
         </div>
-        <div class="mission-box reveal"
-          style="margin-top:1rem;background:linear-gradient(135deg,var(--purple-xlight),var(--blue-xlight));border-color:var(--purple-light);">
-          <div class="mission-label" style="color:var(--purple);">Our Vision</div>
-          <p class="mission-text">To advance human intelligence and innovation in the age of artificial intelligence.
-          </p>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values-section" aria-labelledby="values-title">
+      <div class="values-section-header reveal">
+        <div class="section-label">Our Values</div>
+        <h2 id="values-title">What Drives Us</h2>
+        <p class="section-desc" style="margin:0 auto;text-align:center;">The principles that guide every decision,
+          every lab, and every innovation ecosystem we build.</p>
+      </div>
+      <div class="values-5-grid">
+        <div class="value-5-card reveal">
+          <div class="value-5-icon">💡</div>
+          <h3>Innovation</h3>
+          <p>Encouraging creativity and experimentation.</p>
         </div>
+        <div class="value-5-card reveal reveal-delay-1">
+          <div class="value-5-icon">🧠</div>
+          <h3>Human Intelligence</h3>
+          <p>Empowering people through technology.</p>
+        </div>
+        <div class="value-5-card reveal reveal-delay-2">
+          <div class="value-5-icon">⚙️</div>
+          <h3>Engineering Excellence</h3>
+          <p>Building world-class technology platforms.</p>
+        </div>
+        <div class="value-5-card reveal reveal-delay-3">
+          <div class="value-5-icon">🤝</div>
+          <h3>Collaboration</h3>
+          <p>Connecting educators, engineers, and innovators.</p>
+        </div>
+        <div class="value-5-card reveal reveal-delay-4">
+          <div class="value-5-icon">🛡️</div>
+          <h3>Integrity</h3>
+          <p>Advancing responsible and ethical innovation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUSTAINABILITY -->
+    <section class="sustain-section" aria-labelledby="sustain-title">
+      <div class="sustain-inner reveal">
+        <div class="sustain-icon">🌱</div>
+        <div class="section-label" style="justify-content:center;">Sustainability</div>
+        <h2 id="sustain-title">Committed to Responsible Innovation</h2>
+        <p>Brighture is committed to advancing sustainable innovation by enabling technologies that improve efficiency,
+          safety, and responsible technological progress.</p>
       </div>
     </section>
 
     <!-- FRAMEWORK -->
     <section id="framework" aria-labelledby="framework-title">
-      <div class="framework-header reveal">
-        <div class="section-label">Our Framework</div>
-        <h2 class="section-title" id="framework-title">The Brighture Global<br>Innovation Lab Framework</h2>
-        <p class="section-desc">We empower institutions to build world-class ecosystems for artificial intelligence,
-          robotics, and emerging technologies — turning classrooms into hands-on innovation environments where ideas
-          become intelligent systems.</p>
+      <div class="infra-section" style="background:white;border-top:none;border-bottom:none;">
+        <div class="infra-inner">
+          <div class="infra-text reveal">
+            <div class="section-label">Our Framework</div>
+            <h2 class="section-title" id="framework-title">The Brighture Global<br>Innovation Lab Framework</h2>
+            <p class="section-desc">The <strong>Brighture Global Innovation Lab Framework</strong> empowers
+              institutions and enterprises to build world-class ecosystems for artificial intelligence, robotics, and
+              emerging technologies.</p>
+            <p class="section-desc">This framework enables schools, universities, innovation centers, and organizations
+              to create <strong>hands-on technology ecosystems where ideas become intelligent systems and real-world
+                solutions.</strong></p>
+          </div>
+          <div class="img-col reveal reveal-delay-1">
+            <img src="images/Brighture Global Innovation Lab Framework.webp"
+              alt="Brighture Global Innovation Lab Framework" class="img-section">
+          </div>
+        </div>
       </div>
+
+      <!-- THE NEED FOR INNOVATION INFRASTRUCTURE -->
+      <div class="infra-section">
+        <div class="infra-inner">
+          <div class="infra-text reveal">
+            <div class="section-label">Why It Matters</div>
+            <h2 class="section-title">The Need for<br>Innovation Infrastructure</h2>
+            <p class="section-desc">Artificial intelligence is transforming every industry and discipline. Innovation
+              today requires environments where technology can be explored, tested, and deployed in real-world
+              scenarios.</p>
+            <p class="section-desc">Traditional classrooms often lack the infrastructure needed to experiment with
+              emerging technologies such as robotics, autonomous systems, and intelligent devices.</p>
+            <p class="section-desc">The <strong>Brighture Global Innovation Lab Framework</strong> addresses this gap
+              by providing a structured approach to building technology-driven innovation environments.</p>
+          </div>
+          <div class="img-col reveal reveal-delay-1">
+            <img src="images/The Need for Innovation Infrastructure.webp"
+              alt="The Need for Innovation Infrastructure" class="img-section">
+          </div>
+        </div>
+      </div>
+
+      <div class="framework-header reveal" style="margin-top:4rem;">
+        <div class="section-label">The Four Pillars</div>
+        <h2 class="section-title" id="pillars-title">The Four Pillars<br>of the Framework</h2>
+      </div>
+
       <div class="pillars-grid">
         <div class="pillar-card pc-1 reveal">
-          <div class="pillar-num" aria-hidden="true">01</div>
-          <div class="pillar-icon pi-1" aria-hidden="true">🖥️</div>
+<div class="pillar-icon pi-1" aria-hidden="true">🖥️</div>
           <h3>Technology Infrastructure</h3>
           <p>Innovation begins with access to the right tools and platforms.</p>
           <ul class="pillar-list">
@@ -1131,12 +1387,10 @@
             <li>Embedded hardware platforms</li>
             <li>Intelligent sensors and IoT devices</li>
             <li>Autonomous systems platforms</li>
-            <li>Computer vision technologies</li>
           </ul>
         </div>
         <div class="pillar-card pc-2 reveal reveal-delay-1">
-          <div class="pillar-num" aria-hidden="true">02</div>
-          <div class="pillar-icon pi-2" aria-hidden="true">🔬</div>
+<div class="pillar-icon pi-2" aria-hidden="true">🔬</div>
           <h3>Experiential Learning</h3>
           <p>Innovation happens through experimentation and hands-on exploration.</p>
           <ul class="pillar-list">
@@ -1148,20 +1402,19 @@
           </ul>
         </div>
         <div class="pillar-card pc-3 reveal reveal-delay-2">
-          <div class="pillar-num" aria-hidden="true">03</div>
-          <div class="pillar-icon pi-3" aria-hidden="true">💡</div>
+<div class="pillar-icon pi-3" aria-hidden="true">💡</div>
           <h3>Innovation Culture</h3>
-          <p>Ecosystems thrive when creativity, experimentation, and collaboration are encouraged.</p>
+          <p>Innovation ecosystems thrive on creativity, collaboration, and bold experimentation.</p>
           <ul class="pillar-list">
             <li>Explore new ideas</li>
             <li>Experiment with emerging technologies</li>
             <li>Collaborate across disciplines</li>
             <li>Solve real-world problems</li>
+            <li>Develop innovation and entrepreneurship skills</li>
           </ul>
         </div>
         <div class="pillar-card pc-4 reveal reveal-delay-3">
-          <div class="pillar-num" aria-hidden="true">04</div>
-          <div class="pillar-icon pi-4" aria-hidden="true">🏛️</div>
+<div class="pillar-icon pi-4" aria-hidden="true">🏛️</div>
           <h3>Institutional Capability</h3>
           <p>Helping institutions build long-term technology capabilities.</p>
           <ul class="pillar-list">
@@ -1186,12 +1439,12 @@
           ecosystem — together creating a holistic environment covering every dimension of intelligent technology.</p>
       </div>
       <div class="labs-grid">
-        <div class="lab-card reveal"><span class="lab-tag">Core</span><span class="lab-emoji">🧠</span>
+        <div class="lab-card reveal"><span class="lab-emoji">🧠</span>
           <h3>AI Innovation Lab</h3>
           <p>Artificial intelligence systems and data-driven intelligence. The foundational lab for machine learning,
             neural networks, and AI application development.</p>
         </div>
-        <div class="lab-card reveal reveal-delay-1"><span class="lab-tag">Core</span><span class="lab-emoji">🤖</span>
+        <div class="lab-card reveal reveal-delay-1"><span class="lab-emoji">🤖</span>
           <h3>Robotics Innovation Lab</h3>
           <p>Design and development of robotic systems and automation. From simple actuators to complex robotic arms and
             mobile platforms.</p>
@@ -1211,8 +1464,7 @@
           <p>Development of intelligent machines that operate independently. Autonomous navigation, decision-making, and
             self-directing system architectures.</p>
         </div>
-        <div class="lab-card lab-card-featured reveal reveal-delay-2"><span class="lab-tag">Studio</span><span
-            class="lab-emoji">⚡</span>
+        <div class="lab-card lab-card-featured reveal reveal-delay-2"><span class="lab-emoji">⚡</span>
           <h3>Innovation Studio</h3>
           <p>Rapid prototyping and technology product development. The creative hub where concepts transform into
             functional prototypes and market-ready solutions.</p>
