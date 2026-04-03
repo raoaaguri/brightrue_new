@@ -247,7 +247,6 @@
       height: auto;
       border-radius: 16px;
       box-shadow: 0 10px 32px rgba(26, 86, 255, 0.10);
-      object-fit: cover;
     }
 
     /* ── METHODOLOGY IMAGE GALLERY ── */
@@ -263,13 +262,13 @@
       height: 220px;
       object-fit: cover;
       border-radius: var(--radius);
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
-      opacity: 0.85;
-      transition: opacity 0.3s;
+      box-shadow: 0 10px 32px rgba(26, 86, 255, 0.10);
+      transition: box-shadow 0.3s, transform 0.3s;
     }
 
     .method-images img:hover {
-      opacity: 1;
+      box-shadow: 0 16px 40px rgba(26, 86, 255, 0.16);
+      transform: translateY(-3px);
     }
 
     /* ── PARTNERS IMAGE ── */
@@ -609,7 +608,7 @@
   <main id="main-content">
 
     <!-- PAGE HERO -->
-    <div class="page-hero" aria-label="AI Trainings hero" style="gap:4rem;">
+    <div class="page-hero hero-split" aria-label="AI Trainings hero">
       <div class="page-hero-blob phb-1" aria-hidden="true"></div>
       <div class="page-hero-blob phb-2" aria-hidden="true"></div>
       <div class="page-hero-content">
@@ -623,9 +622,8 @@
           <a href="#level1" class="btn-secondary">View Pathway</a>
         </div>
       </div>
-      <div class="page-hero-image" style="flex:1;min-width:320px;display:flex;align-items:center;justify-content:center;">
-        <img src="images/Consolidated Images for AI Trainings1.webp" alt="AI Training Programs at Brighture"
-          style="max-width:440px;width:100%;height:auto;border-radius:18px;box-shadow:0 20px 60px rgba(26,86,255,0.13);">
+      <div class="page-hero-image">
+        <img src="images/Consolidated Images for AI Trainings1.webp" alt="AI Training Programs at Brighture" class="img-hero">
       </div>
     </div>
 
