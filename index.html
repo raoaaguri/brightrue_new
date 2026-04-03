@@ -614,18 +614,9 @@
     }
 
     .labs-header {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: end;
-      margin-bottom: 3.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .labs-header {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
     }
 
     /* ── JOURNEY ── */
@@ -1432,11 +1423,9 @@
     <!-- LABS -->
     <section id="labs" aria-labelledby="labs-title">
       <div class="labs-header">
-        <div>
-          <div class="section-label">Lab Ecosystem</div>
-          <h2 class="section-title" id="labs-title">Six Specialized<br>Innovation Environments</h2>
-        </div>
-        <p class="section-desc">The Brighture framework integrates multiple innovation environments within a single
+        <div class="section-label" style="justify-content:center;">Lab Ecosystem</div>
+        <h2 class="section-title" id="labs-title" style="text-align:center;">Six Specialized<br>Innovation Environments</h2>
+        <p class="section-desc" style="text-align:center;margin:0 auto 3.5rem;">The Brighture framework integrates multiple innovation environments within a single
           ecosystem — together creating a holistic environment covering every dimension of intelligent technology.</p>
       </div>
       <div class="labs-grid">
