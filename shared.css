@@ -1113,7 +1113,7 @@ section {
 }
 @media (max-width: 640px) {
   .why-brighture-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 .prog-learn-more {
@@ -1452,7 +1452,7 @@ footer {
     grid-template-columns: 1fr;
   }
   .stats-strip {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 }
